@@ -2,4 +2,14 @@
 title: "Corpus"
 ---
 
-Scaffold page. Replace with generated/reviewed project content as the pilot develops.
+This page summarizes the current corpus-planning state for the Sacrificial Debt pilot. Canonical source records will live in the project data files after provenance, rights, and checksum review.
+
+## Manual Pilot Scope
+
+The first Sacrificial Debt pilot is Germany-first. Germany is the mechanism-discovery case, while Britain, Australia, and France remain required contrast cases whose matched samples are deferred until the German pilot establishes that the codebook can distinguish sacrificial asymmetry, debt, essentialization, and rival explanations without concept inflation.
+
+The pilot corpus deliberately guards against Koenigsberg-confirmation bias. Hitler-centered evidence is capped as one source family; the pilot also requires Judenzaehlung allegation and contradiction materials, Jewish veteran and organizational sources, Nazi leadership and propaganda comparisons, veterans' memory contexts, and explicit rival/negative-evidence targets.
+
+Canonical planning manifest:
+
+- [`manual-pilot-corpus-v0.1.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/manifests/manual-pilot-corpus-v0.1.md)
