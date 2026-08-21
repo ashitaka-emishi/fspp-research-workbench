@@ -1,0 +1,37 @@
+---
+title: "Boundaries"
+---
+
+The Workbench separates reusable infrastructure from project-specific theory. This boundary is methodological, not merely organizational.
+
+## Shared Infrastructure
+
+Shared code belongs under:
+
+```text
+src/fspp_workbench/
+```
+
+Shared modules may store, validate, version, compare, audit, and publish evidence. They must not contain Sacrificial Debt-specific theoretical categories except through generic extension interfaces.
+
+## Project Theory
+
+Sacrificial Debt theory belongs under:
+
+```text
+src/fspp_workbench/projects/sacrificial_debt/
+projects/sacrificial-debt/research/
+projects/sacrificial-debt/codebook/
+```
+
+## Import Rule
+
+Shared infrastructure must not import `fspp_workbench.projects.*`.
+
+Project modules may import shared infrastructure.
+
+## Canonical And Generated Data
+
+Canonical records live in project data, corpus/provenance manifests, research files, and codebook files.
+
+Generated outputs live under generated-output directories and must be rebuildable.

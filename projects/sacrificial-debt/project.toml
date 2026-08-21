@@ -1,0 +1,18 @@
+project_id = "sd"
+name = "Sacrificial Debt"
+status = "pilot"
+codebook_version = "0.2.0"
+annotation_schema_version = "0.1.0"
+manual_first = true
+
+[cases.germany]
+role = "mechanism_discovery"
+
+[cases.australia]
+role = "explicit_equality_of_sacrifice_contrast"
+
+[cases.britain]
+role = "individualized_stigma_contrast"
+
+[cases.france]
+role = "republican_burden_sharing_contrast"

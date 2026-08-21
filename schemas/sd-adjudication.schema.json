@@ -1,0 +1,79 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "adjudicated_value": {
+      "anyOf": [
+        {},
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Adjudicated Value"
+    },
+    "adjudication_id": {
+      "title": "Adjudication Id",
+      "type": "string"
+    },
+    "adjudicator_id": {
+      "title": "Adjudicator Id",
+      "type": "string"
+    },
+    "codebook_change_needed": {
+      "default": false,
+      "title": "Codebook Change Needed",
+      "type": "boolean"
+    },
+    "coder_values": {
+      "additionalProperties": true,
+      "title": "Coder Values",
+      "type": "object"
+    },
+    "correction_candidate": {
+      "default": false,
+      "title": "Correction Candidate",
+      "type": "boolean"
+    },
+    "date": {
+      "format": "date",
+      "title": "Date",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "accept_a",
+        "accept_b",
+        "synthesize",
+        "uncertain",
+        "exclude",
+        "defer"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "field_name": {
+      "title": "Field Name",
+      "type": "string"
+    },
+    "rationale": {
+      "title": "Rationale",
+      "type": "string"
+    },
+    "unit_id": {
+      "title": "Unit Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "adjudication_id",
+    "unit_id",
+    "field_name",
+    "coder_values",
+    "decision",
+    "rationale",
+    "adjudicator_id",
+    "date"
+  ],
+  "title": "Adjudication",
+  "type": "object"
+}

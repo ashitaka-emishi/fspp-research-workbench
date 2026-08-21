@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+
+:root {
+  --fspp-charcoal: #202020;
+  --fspp-black: #030303;
+  --fspp-parchment: #f5f5dc;
+  --fspp-maroon: #800000;
+  --fspp-blood-shadow: #500000;
+  --bs-body-font-family: "Lato", "Segoe UI", Roboto, sans-serif;
+  --bs-link-color: var(--fspp-maroon);
+  --bs-link-hover-color: var(--fspp-blood-shadow);
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--fspp-charcoal);
+}
+
+body {
+  color: var(--fspp-parchment);
+  font-family: "Lato", "Segoe UI", Roboto, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-title {
+  font-family: "Catamaran", "Segoe UI", Roboto, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.navbar {
+  background: var(--fspp-black) !important;
+  border-bottom: 10px solid var(--fspp-maroon);
+}
+
+.navbar .navbar-title,
+.navbar .nav-link,
+.navbar .dropdown-item {
+  color: var(--fspp-parchment) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active,
+.navbar .dropdown-item:hover {
+  color: #ffffff !important;
+  background: rgba(128, 0, 0, 0.4);
+}
+
+#quarto-content {
+  background:
+    linear-gradient(
+      0deg,
+      rgba(80, 0, 0, 0.22) 0%,
+      rgba(80, 0, 0, 0.58) 34%,
+      rgba(3, 3, 3, 0.78) 100%
+    ),
+    var(--fspp-charcoal);
+}
+
+main.content {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 2.25rem;
+  color: #202020;
+  background: var(--fspp-parchment);
+  border-top: 10px solid var(--fspp-maroon);
+}
+
+.quarto-title-block .title {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+h2 {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 4px solid var(--fspp-maroon);
+}
+
+p,
+li {
+  font-size: 1.04rem;
+  line-height: 1.66;
+}
+
+a {
+  color: var(--fspp-maroon);
+  font-weight: 700;
+}
+
+hr {
+  margin: 2rem 0;
+  height: 10px;
+  border: 0;
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    var(--fspp-maroon) 0%,
+    var(--fspp-maroon) 30%,
+    var(--fspp-charcoal) 100%
+  );
+}
+
+pre,
+code {
+  border-radius: 0;
+}
+
+pre {
+  border-left: 4px solid var(--fspp-maroon);
+}
+
+.callout {
+  border-radius: 0;
+  border-left-color: var(--fspp-maroon) !important;
+}
+
+#TOC a,
+.sidebar nav[role="doc-toc"] a {
+  color: var(--fspp-parchment);
+  font-weight: 400;
+}

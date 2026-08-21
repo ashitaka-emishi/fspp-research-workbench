@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fspp-research-workbench"
+version = "0.1.0"
+description = "Reusable, auditable research infrastructure for the Foundation for the Study of Political Pathology"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "pydantic>=2.10,<3",
+  "typer>=0.12,<1",
+  "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+analysis = [
+  "duckdb>=1.2,<2",
+  "pandas>=2.2,<3",
+  "pyarrow>=25,<26",
+]
+dev = [
+  "pytest>=8,<9",
+  "pytest-cov>=6,<7",
+  "ruff>=0.11,<1",
+  "mypy>=1.15,<2",
+  "types-PyYAML>=6,<7",
+]
+
+[project.scripts]
+fspp = "fspp_workbench.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fspp_workbench"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+exclude = [
+  ".venv",
+  "projects/sacrificial-debt/generated",
+  "publication/.quarto",
+  "publication/_site",
+  "publication/engineering/.quarto",
+  "publication/projects/sacrificial-debt/.quarto",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+packages = ["fspp_workbench"]

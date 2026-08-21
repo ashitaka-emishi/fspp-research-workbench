@@ -1,0 +1,15 @@
+version: 0.2.0
+values:
+  - racial_antisemitism
+  - ethnic_prejudice
+  - scapegoating
+  - defeat_betrayal
+  - security
+  - anti_bolshevism
+  - conquest
+  - material_expropriation
+  - institutional_radicalization
+  - bureaucratic_competition
+  - revenge
+  - economic_competition
+  - other

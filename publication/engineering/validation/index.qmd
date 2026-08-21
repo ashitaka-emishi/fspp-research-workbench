@@ -1,0 +1,29 @@
+---
+title: "Validation Gates"
+---
+
+Validation is part of the research method. Checks protect syntax, schema freshness, data integrity, and methodological guardrails.
+
+## Standard Check Set
+
+Run these before commits and before publishing:
+
+```bash
+uv run ruff check .
+uv run pytest
+uv run fspp schema check
+uv run fspp validate
+```
+
+## What The Checks Protect
+
+- `ruff check`: Python style, imports, modernization, and common bug patterns.
+- `pytest`: unit and guardrail tests.
+- `fspp schema check`: checked-in JSON Schemas match the current Pydantic models.
+- `fspp validate`: canonical scaffold data and referential integrity.
+
+## Research-Sensitive Changes
+
+Changes touching research data, schemas, codebook semantics, or source boundaries require an explicit account of research, migration, and reproducibility consequences.
+
+AI/model review may flag issues, but it may not overwrite reference annotations.

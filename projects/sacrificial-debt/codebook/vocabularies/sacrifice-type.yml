@@ -1,0 +1,24 @@
+version: 0.2.0
+values:
+  - code: death
+    label: Death
+  - code: injury
+    label: Injury
+  - code: military_service
+    label: Military service
+  - code: food
+    label: Food/deprivation
+  - code: property
+    label: Property
+  - code: labor
+    label: Labor
+  - code: family
+    label: Family relations
+  - code: freedom
+    label: Freedom
+  - code: time
+    label: Time
+  - code: bodily_risk
+    label: Bodily risk
+  - code: other
+    label: Other

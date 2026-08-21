@@ -1,0 +1,147 @@
+{
+  "$defs": {
+    "NegativeType": {
+      "enum": [
+        "discharge_success",
+        "veteran_protection",
+        "contribution_reclassification",
+        "expected_rhetoric_absent",
+        "coercion_without_debt",
+        "debt_without_coercion",
+        "explicit_rejection",
+        "chronology_contradiction",
+        "actor_inconsistency",
+        "other"
+      ],
+      "title": "NegativeType",
+      "type": "string"
+    },
+    "SearchScope": {
+      "additionalProperties": false,
+      "properties": {
+        "corpus_tiers": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Corpus Tiers",
+          "type": "array"
+        },
+        "date_range": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date Range"
+        },
+        "query_or_protocol": {
+          "title": "Query Or Protocol",
+          "type": "string"
+        },
+        "source_families": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Families",
+          "type": "array"
+        },
+        "terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Terms",
+          "type": "array"
+        }
+      },
+      "required": [
+        "corpus_tiers",
+        "query_or_protocol"
+      ],
+      "title": "SearchScope",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "title": "Case Id",
+      "type": "string"
+    },
+    "falsification_test_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Falsification Test Ids",
+      "type": "array"
+    },
+    "hypothesis_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Hypothesis Ids",
+      "type": "array"
+    },
+    "implication": {
+      "title": "Implication",
+      "type": "string"
+    },
+    "negative_evidence_id": {
+      "title": "Negative Evidence Id",
+      "type": "string"
+    },
+    "negative_type": {
+      "$ref": "#/$defs/NegativeType"
+    },
+    "proposition_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Proposition Ids",
+      "type": "array"
+    },
+    "review_status": {
+      "default": "draft",
+      "enum": [
+        "draft",
+        "reviewed",
+        "adjudicated"
+      ],
+      "title": "Review Status",
+      "type": "string"
+    },
+    "search_scope": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SearchScope"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "strength": {
+      "enum": [
+        "weak",
+        "moderate",
+        "strong",
+        "decisive_for_test"
+      ],
+      "title": "Strength",
+      "type": "string"
+    }
+  },
+  "required": [
+    "negative_evidence_id",
+    "case_id",
+    "negative_type",
+    "strength",
+    "implication"
+  ],
+  "title": "NegativeEvidence",
+  "type": "object"
+}

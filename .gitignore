@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.DS_Store
+.env
+
+# Generated/rebuildable project outputs
+projects/sacrificial-debt/generated/duckdb/*.duckdb
+projects/sacrificial-debt/generated/parquet/*.parquet
+publication/_site/
+publication/.quarto/
+publication/engineering/.quarto/
+publication/projects/sacrificial-debt/.quarto/
+
+# Source binaries are opt-in according to copyright policy
+projects/sacrificial-debt/corpus/raw/*
+!projects/sacrificial-debt/corpus/raw/.gitkeep
+!projects/sacrificial-debt/corpus/raw/README.md

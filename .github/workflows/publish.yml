@@ -1,0 +1,40 @@
+name: publish-quarto
+on:
+  workflow_dispatch:
+  push:
+    branches: ["master"]
+    tags: ["sd-v*"]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.14"
+      - run: uv sync --all-extras
+      - run: uv run fspp validate
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - run: quarto render
+        working-directory: publication
+      - run: quarto render
+        working-directory: publication/engineering
+      - run: quarto render
+        working-directory: publication/projects/sacrificial-debt
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: publication/_site
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

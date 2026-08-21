@@ -1,0 +1,101 @@
+{
+  "$defs": {
+    "EvidenceStrength": {
+      "enum": [
+        "weak",
+        "moderate",
+        "strong",
+        "decisive_for_mechanism"
+      ],
+      "title": "EvidenceStrength",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "case_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Case Ids",
+      "type": "array"
+    },
+    "chain_strength": {
+      "$ref": "#/$defs/EvidenceStrength"
+    },
+    "claim_id": {
+      "title": "Claim Id",
+      "type": "string"
+    },
+    "contradicting_proposition_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Contradicting Proposition Ids",
+      "type": "array"
+    },
+    "evidence_chain_id": {
+      "title": "Evidence Chain Id",
+      "type": "string"
+    },
+    "mechanism_component_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Mechanism Component Ids",
+      "type": "array"
+    },
+    "negative_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Negative Evidence Ids",
+      "type": "array"
+    },
+    "qualifying_proposition_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Qualifying Proposition Ids",
+      "type": "array"
+    },
+    "review_status": {
+      "default": "draft",
+      "enum": [
+        "draft",
+        "human_reviewed",
+        "publication_locked"
+      ],
+      "title": "Review Status",
+      "type": "string"
+    },
+    "rival_explanation_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Rival Explanation Ids",
+      "type": "array"
+    },
+    "source_quality_summary": {
+      "additionalProperties": true,
+      "title": "Source Quality Summary",
+      "type": "object"
+    },
+    "supporting_proposition_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Supporting Proposition Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "evidence_chain_id",
+    "claim_id",
+    "case_ids",
+    "chain_strength"
+  ],
+  "title": "EvidenceChain",
+  "type": "object"
+}

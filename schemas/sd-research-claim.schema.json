@@ -1,0 +1,157 @@
+{
+  "$defs": {
+    "CausalRole": {
+      "enum": [
+        "constitutive",
+        "diagnostic",
+        "motivational",
+        "legitimating",
+        "escalatory",
+        "decision_causal",
+        "unclear"
+      ],
+      "title": "CausalRole",
+      "type": "string"
+    },
+    "EvidenceStrength": {
+      "enum": [
+        "weak",
+        "moderate",
+        "strong",
+        "decisive_for_mechanism"
+      ],
+      "title": "EvidenceStrength",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "causal_role": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CausalRole"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "change_note": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Change Note"
+    },
+    "claim_id": {
+      "title": "Claim Id",
+      "type": "string"
+    },
+    "claim_text": {
+      "title": "Claim Text",
+      "type": "string"
+    },
+    "claim_type": {
+      "enum": [
+        "descriptive",
+        "interpretive",
+        "comparative",
+        "causal"
+      ],
+      "title": "Claim Type",
+      "type": "string"
+    },
+    "evidence_chain_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Evidence Chain Ids",
+      "type": "array"
+    },
+    "evidence_strength": {
+      "$ref": "#/$defs/EvidenceStrength"
+    },
+    "human_review_status": {
+      "default": "pending",
+      "enum": [
+        "pending",
+        "passed",
+        "failed"
+      ],
+      "title": "Human Review Status",
+      "type": "string"
+    },
+    "model_stress_status": {
+      "default": "not_run",
+      "enum": [
+        "not_run",
+        "passed",
+        "concerns"
+      ],
+      "title": "Model Stress Status",
+      "type": "string"
+    },
+    "rival_explanation_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Rival Explanation Ids",
+      "type": "array"
+    },
+    "scope_cases": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Scope Cases",
+      "type": "array"
+    },
+    "scope_period": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Scope Period"
+    },
+    "status": {
+      "default": "draft",
+      "enum": [
+        "draft",
+        "active",
+        "narrowed",
+        "rejected",
+        "superseded"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_id",
+    "claim_text",
+    "claim_type",
+    "scope_cases",
+    "evidence_chain_ids",
+    "evidence_strength",
+    "version"
+  ],
+  "title": "ResearchClaim",
+  "type": "object"
+}

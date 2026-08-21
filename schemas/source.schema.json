@@ -1,0 +1,217 @@
+{
+  "$defs": {
+    "Lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "change_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Change Note"
+        },
+        "status": {
+          "$ref": "#/$defs/RecordStatus",
+          "default": "draft"
+        },
+        "superseded_by": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Superseded By",
+          "type": "array"
+        },
+        "supersedes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supersedes",
+          "type": "array"
+        },
+        "version": {
+          "default": "0.1.0",
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "title": "Lineage",
+      "type": "object"
+    },
+    "RecordStatus": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "released",
+        "superseded",
+        "deprecated"
+      ],
+      "title": "RecordStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "acquisition_date": {
+      "format": "date",
+      "title": "Acquisition Date",
+      "type": "string"
+    },
+    "archival_citation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Archival Citation"
+    },
+    "bibliographic_citation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Bibliographic Citation"
+    },
+    "canonical_url": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Canonical Url"
+    },
+    "checksum_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Checksum Sha256",
+      "type": "string"
+    },
+    "copyright_status": {
+      "title": "Copyright Status",
+      "type": "string"
+    },
+    "edition": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Edition"
+    },
+    "language": {
+      "title": "Language",
+      "type": "string"
+    },
+    "lineage": {
+      "$ref": "#/$defs/Lineage"
+    },
+    "local_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Local Path"
+    },
+    "provenance_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Provenance Notes"
+    },
+    "publication_date": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Publication Date"
+    },
+    "redistribution_status": {
+      "title": "Redistribution Status",
+      "type": "string"
+    },
+    "repository": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Repository"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "source_kind": {
+      "title": "Source Kind",
+      "type": "string"
+    },
+    "source_reliability": {
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "uncertain"
+      ],
+      "title": "Source Reliability",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_id",
+    "title",
+    "source_kind",
+    "acquisition_date",
+    "checksum_sha256",
+    "language",
+    "copyright_status",
+    "redistribution_status",
+    "source_reliability"
+  ],
+  "title": "Source",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+---
+title: "Sacrificial Debt"
+---
+
+This subsite is a **generated research publication surface** for the Sacrificial Debt project. Canonical evidence remains in the versioned workbench records.
+
+The project asks when perceived exemption from collective sacrifice can become an attributed political debt and under what additional conditions that debt becomes essentialized, non-dischargeable, or coercively collected.
+
+::: {.callout-warning}
+The workbench treats perpetrator rhetoric as historical evidence, not as valid moral justification. Sacrificial Debt is a mechanism to test and delimit, not a total explanation of genocide or political violence.
+:::
+
+## Project Documents
+
+### [Research Program Prospectus](prospectus/)
+
+The prospectus defines Sacrificial Debt as a comparative theory-building research program. It records the central research question, case-comparison logic, falsification burden, and staged relationship between the broader program and the first empirical paper.

@@ -1,0 +1,11 @@
+{
+  "source_id": "sd-src-000001",
+  "title": "Synthetic demonstration source",
+  "source_kind": "synthetic_fixture",
+  "acquisition_date": "2026-08-20",
+  "checksum_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "language": "en",
+  "copyright_status": "synthetic",
+  "redistribution_status": "redistributable",
+  "source_reliability": "high"
+}

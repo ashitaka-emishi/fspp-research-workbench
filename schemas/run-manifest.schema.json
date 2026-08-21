@@ -1,0 +1,116 @@
+{
+  "$defs": {
+    "RunOutput": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "RunOutput",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "codebook_version": {
+      "title": "Codebook Version",
+      "type": "string"
+    },
+    "command": {
+      "title": "Command",
+      "type": "string"
+    },
+    "environment_lock_hash": {
+      "title": "Environment Lock Hash",
+      "type": "string"
+    },
+    "finished_at": {
+      "format": "date-time",
+      "title": "Finished At",
+      "type": "string"
+    },
+    "git_commit": {
+      "title": "Git Commit",
+      "type": "string"
+    },
+    "input_manifest_hashes": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Input Manifest Hashes",
+      "type": "object"
+    },
+    "model_runs": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Model Runs",
+      "type": "array"
+    },
+    "outputs": {
+      "items": {
+        "$ref": "#/$defs/RunOutput"
+      },
+      "title": "Outputs",
+      "type": "array"
+    },
+    "random_seeds": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Random Seeds",
+      "type": "object"
+    },
+    "run_manifest_id": {
+      "title": "Run Manifest Id",
+      "type": "string"
+    },
+    "schema_versions": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Schema Versions",
+      "type": "object"
+    },
+    "started_at": {
+      "format": "date-time",
+      "title": "Started At",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "success",
+        "failed",
+        "partial"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_manifest_id",
+    "command",
+    "git_commit",
+    "environment_lock_hash",
+    "input_manifest_hashes",
+    "schema_versions",
+    "codebook_version",
+    "started_at",
+    "finished_at",
+    "status"
+  ],
+  "title": "RunManifest",
+  "type": "object"
+}

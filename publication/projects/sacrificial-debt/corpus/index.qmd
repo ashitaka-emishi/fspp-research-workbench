@@ -1,0 +1,5 @@
+---
+title: "Corpus"
+---
+
+Scaffold page. Replace with generated/reviewed project content as the pilot develops.

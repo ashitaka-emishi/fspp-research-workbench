@@ -1,0 +1,374 @@
+{
+  "$defs": {
+    "AnnotationState": {
+      "enum": [
+        "observation_draft",
+        "observation_reviewed",
+        "observation_locked",
+        "interpretation_draft",
+        "reference_reviewed",
+        "released"
+      ],
+      "title": "AnnotationState",
+      "type": "string"
+    },
+    "CausalRole": {
+      "enum": [
+        "constitutive",
+        "diagnostic",
+        "motivational",
+        "legitimating",
+        "escalatory",
+        "decision_causal",
+        "unclear"
+      ],
+      "title": "CausalRole",
+      "type": "string"
+    },
+    "DebtStatus": {
+      "enum": [
+        "emic",
+        "etic",
+        "mixed",
+        "absent"
+      ],
+      "title": "DebtStatus",
+      "type": "string"
+    },
+    "Dischargeability": {
+      "enum": [
+        "dischargeable",
+        "contested",
+        "non_dischargeable",
+        "unclear",
+        "not_applicable"
+      ],
+      "title": "Dischargeability",
+      "type": "string"
+    },
+    "EssentializationStatus": {
+      "enum": [
+        "individual_behavior",
+        "group_generalized",
+        "racial_ontological",
+        "other_ontological",
+        "unclear",
+        "none"
+      ],
+      "title": "EssentializationStatus",
+      "type": "string"
+    },
+    "EvidenceStrength": {
+      "enum": [
+        "weak",
+        "moderate",
+        "strong",
+        "decisive_for_mechanism"
+      ],
+      "title": "EvidenceStrength",
+      "type": "string"
+    },
+    "ExplicitComparison": {
+      "enum": [
+        "yes",
+        "no",
+        "uncertain"
+      ],
+      "title": "ExplicitComparison",
+      "type": "string"
+    },
+    "InterpretationLayer": {
+      "additionalProperties": false,
+      "properties": {
+        "accounting": {
+          "$ref": "#/$defs/SacrificialAccounting"
+        },
+        "causal_role": {
+          "$ref": "#/$defs/CausalRole",
+          "default": "unclear"
+        },
+        "dischargeability": {
+          "$ref": "#/$defs/Dischargeability",
+          "default": "not_applicable"
+        },
+        "essentialization_status": {
+          "$ref": "#/$defs/EssentializationStatus",
+          "default": "none"
+        },
+        "evidence_strength": {
+          "$ref": "#/$defs/EvidenceStrength",
+          "default": "weak"
+        },
+        "rival_explanation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Rival Explanation Ids",
+          "type": "array"
+        },
+        "sanction_types": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sanction Types",
+          "type": "array"
+        }
+      },
+      "required": [
+        "accounting"
+      ],
+      "title": "InterpretationLayer",
+      "type": "object"
+    },
+    "Lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "change_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Change Note"
+        },
+        "status": {
+          "$ref": "#/$defs/RecordStatus",
+          "default": "draft"
+        },
+        "superseded_by": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Superseded By",
+          "type": "array"
+        },
+        "supersedes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supersedes",
+          "type": "array"
+        },
+        "version": {
+          "default": "0.1.0",
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "title": "Lineage",
+      "type": "object"
+    },
+    "ObservationLayer": {
+      "additionalProperties": false,
+      "properties": {
+        "actor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Actor Ids",
+          "type": "array"
+        },
+        "alleged_survivor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Alleged Survivor Ids",
+          "type": "array"
+        },
+        "audience": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Audience"
+        },
+        "collective_object": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Collective Object"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date"
+        },
+        "explicit_comparison": {
+          "$ref": "#/$defs/ExplicitComparison"
+        },
+        "moral_value_sacrifice": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Moral Value Sacrifice",
+          "type": "array"
+        },
+        "moral_value_survival": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Moral Value Survival",
+          "type": "array"
+        },
+        "sacrifice_types": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sacrifice Types",
+          "type": "array"
+        },
+        "sacrificer_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sacrificer Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "explicit_comparison"
+      ],
+      "title": "ObservationLayer",
+      "type": "object"
+    },
+    "RecordStatus": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "released",
+        "superseded",
+        "deprecated"
+      ],
+      "title": "RecordStatus",
+      "type": "string"
+    },
+    "SacrificialAccounting": {
+      "additionalProperties": false,
+      "properties": {
+        "creditor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Creditor Ids",
+          "type": "array"
+        },
+        "debt_language": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Debt Language",
+          "type": "array"
+        },
+        "debt_status": {
+          "$ref": "#/$defs/DebtStatus",
+          "default": "absent"
+        },
+        "debtor_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Debtor Ids",
+          "type": "array"
+        },
+        "equalization_claim": {
+          "default": false,
+          "title": "Equalization Claim",
+          "type": "boolean"
+        },
+        "reciprocal_obligation": {
+          "title": "Reciprocal Obligation",
+          "type": "boolean"
+        },
+        "repayment_language": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Repayment Language",
+          "type": "array"
+        },
+        "sacrificial_asymmetry": {
+          "title": "Sacrificial Asymmetry",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "sacrificial_asymmetry",
+        "reciprocal_obligation"
+      ],
+      "title": "SacrificialAccounting",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "annotation_id": {
+      "title": "Annotation Id",
+      "type": "string"
+    },
+    "codebook_version": {
+      "title": "Codebook Version",
+      "type": "string"
+    },
+    "coder_id": {
+      "title": "Coder Id",
+      "type": "string"
+    },
+    "interpretation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/InterpretationLayer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "lineage": {
+      "$ref": "#/$defs/Lineage"
+    },
+    "observation": {
+      "$ref": "#/$defs/ObservationLayer"
+    },
+    "proposition_id": {
+      "title": "Proposition Id",
+      "type": "string"
+    },
+    "state": {
+      "$ref": "#/$defs/AnnotationState"
+    }
+  },
+  "required": [
+    "annotation_id",
+    "proposition_id",
+    "state",
+    "observation",
+    "coder_id",
+    "codebook_version"
+  ],
+  "title": "Annotation",
+  "type": "object"
+}

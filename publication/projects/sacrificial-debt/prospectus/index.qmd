@@ -1,0 +1,32 @@
+---
+title: "Research Program Prospectus"
+---
+
+The Sacrificial Debt prospectus is the project-level proposal for the first native research program in the FSPP Research Workbench.
+
+It treats Richard A. Koenigsberg's interpretation of Hitler and the Holocaust as a generative case rather than as a conclusion to be re-proved. The proposed program asks when perceived exemption from collective sacrifice becomes an attributed political debt, and under what conditions that debt becomes essentialized, non-dischargeable, or coercively collected.
+
+## Program Status
+
+- Working proposal: v0.2
+- Date: 20 August 2026
+- Project type: comparative theory-building research program
+- First recommended empirical paper: "When Survival Becomes Guilt"
+
+## Core Function
+
+The prospectus establishes the project's initial research contract:
+
+- Germany is the mechanism-discovery case.
+- Britain, Australia, and France are initial contrast cases.
+- genocide is treated as one possible terminal outcome, not the definition of sacrificial debt.
+- manual, proposition-level coding comes before large-scale NLP or automated extraction.
+- falsification criteria and negative evidence are required from the start.
+
+## Source Document
+
+The controlled source text remains in the repository design materials:
+
+- [Sacrificial Debt Research Program Prospectus v0.2](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/docs/design/source/FSPP_Sacrificial_Debt_Research_Program_Prospectus_v0.2.txt)
+
+The prospectus informs this subsite, but canonical project definitions still flow through the versioned research files and codebook.

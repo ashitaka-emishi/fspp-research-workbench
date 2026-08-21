@@ -1,0 +1,157 @@
+{
+  "$defs": {
+    "CorpusTier": {
+      "enum": [
+        "tier1",
+        "tier2",
+        "tier3"
+      ],
+      "title": "CorpusTier",
+      "type": "string"
+    },
+    "EvidenceDomain": {
+      "enum": [
+        "rhetoric",
+        "reception",
+        "policy"
+      ],
+      "title": "EvidenceDomain",
+      "type": "string"
+    },
+    "Lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "change_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Change Note"
+        },
+        "status": {
+          "$ref": "#/$defs/RecordStatus",
+          "default": "draft"
+        },
+        "superseded_by": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Superseded By",
+          "type": "array"
+        },
+        "supersedes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supersedes",
+          "type": "array"
+        },
+        "version": {
+          "default": "0.1.0",
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "title": "Lineage",
+      "type": "object"
+    },
+    "RecordStatus": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "released",
+        "superseded",
+        "deprecated"
+      ],
+      "title": "RecordStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "actor_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Actor Ids",
+      "type": "array"
+    },
+    "audience": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Audience"
+    },
+    "case_id": {
+      "title": "Case Id",
+      "type": "string"
+    },
+    "corpus_tier": {
+      "$ref": "#/$defs/CorpusTier"
+    },
+    "document_date": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Document Date"
+    },
+    "document_id": {
+      "title": "Document Id",
+      "type": "string"
+    },
+    "evidence_domain": {
+      "$ref": "#/$defs/EvidenceDomain"
+    },
+    "lineage": {
+      "$ref": "#/$defs/Lineage"
+    },
+    "register": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Register"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    }
+  },
+  "required": [
+    "document_id",
+    "source_id",
+    "title",
+    "evidence_domain",
+    "corpus_tier",
+    "case_id"
+  ],
+  "title": "Document",
+  "type": "object"
+}

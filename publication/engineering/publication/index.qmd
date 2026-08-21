@@ -1,0 +1,41 @@
+---
+title: "Publication Build"
+---
+
+The public site is a GitHub Pages artifact rendered from multiple Quarto projects.
+
+## Build Command
+
+```bash
+make site
+```
+
+This renders:
+
+```text
+publication/
+publication/engineering/
+publication/projects/sacrificial-debt/
+```
+
+into:
+
+```text
+publication/_site/
+```
+
+## GitHub Pages
+
+The expected Pages URL is:
+
+<https://ashitaka-emishi.github.io/fspp-research-wrokbench/>
+
+The source repository is:
+
+<https://github.com/ashitaka-emishi/fspp-research-wrokbench>
+
+## Generated Output
+
+`publication/_site/` and Quarto cache directories are generated artifacts. They are ignored by Git and should be rebuilt from source files.
+
+Canonical evidence remains in project data, research, codebook, corpus, and schema files. The website is a rendered review and publication surface.

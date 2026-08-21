@@ -1,0 +1,142 @@
+{
+  "$defs": {
+    "Lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "change_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Change Note"
+        },
+        "status": {
+          "$ref": "#/$defs/RecordStatus",
+          "default": "draft"
+        },
+        "superseded_by": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Superseded By",
+          "type": "array"
+        },
+        "supersedes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supersedes",
+          "type": "array"
+        },
+        "version": {
+          "default": "0.1.0",
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "title": "Lineage",
+      "type": "object"
+    },
+    "RecordStatus": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "released",
+        "superseded",
+        "deprecated"
+      ],
+      "title": "RecordStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "char_end": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Char End"
+    },
+    "char_start": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Char Start"
+    },
+    "document_id": {
+      "title": "Document Id",
+      "type": "string"
+    },
+    "lineage": {
+      "$ref": "#/$defs/Lineage"
+    },
+    "ordinal": {
+      "minimum": 1,
+      "title": "Ordinal",
+      "type": "integer"
+    },
+    "page_label": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Page Label"
+    },
+    "segment_id": {
+      "title": "Segment Id",
+      "type": "string"
+    },
+    "segment_type": {
+      "enum": [
+        "page",
+        "paragraph",
+        "sentence"
+      ],
+      "title": "Segment Type",
+      "type": "string"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "text_hash": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Text Hash",
+      "type": "string"
+    }
+  },
+  "required": [
+    "segment_id",
+    "document_id",
+    "segment_type",
+    "ordinal",
+    "text",
+    "text_hash"
+  ],
+  "title": "Segment",
+  "type": "object"
+}

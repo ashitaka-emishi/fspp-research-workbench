@@ -1,0 +1,15 @@
+name: Research-engineering decision
+description: Decision that could change interpretation, codebook semantics, or inference
+body:
+  - type: textarea
+    id: ambiguity
+    attributes: {label: Ambiguity}
+    validations: {required: true}
+  - type: textarea
+    id: options
+    attributes: {label: Competing options}
+    validations: {required: true}
+  - type: textarea
+    id: consequences
+    attributes: {label: Research consequences}
+    validations: {required: true}

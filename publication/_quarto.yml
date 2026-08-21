@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+
+website:
+  title: "FSPP Research Workbench"
+  site-url: "https://ashitaka-emishi.github.io/fspp-research-wrokbench/"
+  repo-url: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: engineering/
+        text: Engineering
+      - href: projects/sacrificial-debt/
+        text: Sacrificial Debt
+    right:
+      - icon: github
+        href: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
+        aria-label: GitHub repository
+
+format:
+  html:
+    css: styles.css
+    toc: true
+    code-fold: true
+    citations-hover: true

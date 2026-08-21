@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label":"FSPP: validate", "type":"shell", "command":"uv run fspp validate", "group":"test"},
+    {"label":"FSPP: tests", "type":"shell", "command":"uv run pytest", "group":{"kind":"test","isDefault":true}},
+    {"label":"FSPP: build schemas", "type":"shell", "command":"uv run fspp schema build"},
+    {"label":"FSPP: render site", "type":"shell", "command":"make site"}
+  ]
+}

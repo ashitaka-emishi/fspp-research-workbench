@@ -1,0 +1,38 @@
+---
+title: "Environment"
+---
+
+The Workbench uses a project-local Python environment and pinned runtime files so new contributors and CI runs resolve the same toolchain.
+
+## Runtime Pins
+
+- Python: `3.14`
+- Node.js: `24.19.0`
+- Python environment: `.venv`
+- Python package manager: `uv`
+- Website renderer: Quarto
+
+## Local Setup
+
+```bash
+uv venv .venv --python 3.14
+uv sync --all-extras
+```
+
+The `.venv/` directory is ignored by Git. Commit version pins and lockfiles, not local environments.
+
+## Version Files
+
+```text
+.python-version
+.node-version
+.nvmrc
+pyproject.toml
+uv.lock
+```
+
+These files communicate the intended runtime to local shells, editors, CI, and future automation.
+
+## Editor Expectations
+
+VS Code is configured to use `.venv/bin/python`, pytest, Ruff, and the `make site` task for rendering the full GitHub Pages tree.

@@ -1,0 +1,24 @@
+---
+title: "Engineering"
+---
+
+This subsite documents the reusable engineering surface of the **FSPP Research Workbench**: runtime requirements, validation gates, source/data boundaries, and publication build conventions.
+
+## Engineering Documents
+
+- [Architecture](architecture/) — repository shape, package boundaries, and monorepo/subsite design.
+- [Environment](environment/) — Python, Node, uv, Quarto, and local virtual environment expectations.
+- [Validation Gates](validation/) — checks required before commits, publication, and research-data changes.
+- [Publication Build](publication/) — GitHub Pages rendering model and generated-output policy.
+- [Boundaries](boundaries/) — shared infrastructure, project theory, canonical data, and generated artifacts.
+
+## Repository
+
+- Source repository: <https://github.com/ashitaka-emishi/fspp-research-wrokbench>
+- Published site: <https://ashitaka-emishi.github.io/fspp-research-wrokbench/>
+- Python package namespace: `fspp_workbench`
+- Command-line interface: `fspp`
+
+## Operating Rule
+
+The engineering subsite describes how the Workbench is built and verified. It does not override `AGENTS.md`, project codebooks, or research authority files.

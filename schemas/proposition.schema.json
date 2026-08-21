@@ -1,0 +1,129 @@
+{
+  "$defs": {
+    "Lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "change_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Change Note"
+        },
+        "status": {
+          "$ref": "#/$defs/RecordStatus",
+          "default": "draft"
+        },
+        "superseded_by": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Superseded By",
+          "type": "array"
+        },
+        "supersedes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supersedes",
+          "type": "array"
+        },
+        "version": {
+          "default": "0.1.0",
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "title": "Lineage",
+      "type": "object"
+    },
+    "RecordStatus": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "released",
+        "superseded",
+        "deprecated"
+      ],
+      "title": "RecordStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "char_end": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Char End"
+    },
+    "char_start": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Char Start"
+    },
+    "document_id": {
+      "title": "Document Id",
+      "type": "string"
+    },
+    "exact_text": {
+      "title": "Exact Text",
+      "type": "string"
+    },
+    "lineage": {
+      "$ref": "#/$defs/Lineage"
+    },
+    "proposition_id": {
+      "title": "Proposition Id",
+      "type": "string"
+    },
+    "proposition_note": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Proposition Note"
+    },
+    "segment_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Segment Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "proposition_id",
+    "document_id",
+    "segment_ids",
+    "exact_text"
+  ],
+  "title": "Proposition",
+  "type": "object"
+}

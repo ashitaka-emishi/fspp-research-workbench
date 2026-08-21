@@ -1,0 +1,4 @@
+interface:
+  display_name: "SDLC Workflow"
+  short_description: "Goal-aware issue, PR, milestone, and sizing workflow."
+  default_prompt: "Use $sdlc-workflow to inspect goal or issue state, preserve intent, validate the change, prepare human closeout, and record final goal usage as advisory sizing evidence."

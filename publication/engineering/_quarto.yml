@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: ../_site/engineering
+
+website:
+  title: "Engineering"
+  site-url: "https://ashitaka-emishi.github.io/fspp-research-wrokbench/engineering/"
+  repo-url: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Overview
+      - href: architecture/index.qmd
+        text: Architecture
+      - href: environment/index.qmd
+        text: Environment
+      - href: validation/index.qmd
+        text: Validation
+      - href: publication/index.qmd
+        text: Publication
+      - href: boundaries/index.qmd
+        text: Boundaries
+    right:
+      - icon: house-door
+        href: ../index.html
+        aria-label: Workbench Home
+      - icon: github
+        href: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
+        aria-label: GitHub repository
+
+format:
+  html:
+    css: styles.css
+    toc: true
+    code-fold: true
+    citations-hover: true

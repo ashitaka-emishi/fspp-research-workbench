@@ -1,0 +1,38 @@
+---
+title: "Architecture"
+---
+
+The **FSPP Research Workbench** is a modular monorepo. Shared infrastructure lives in one reusable Python package, while research projects own their theories, codebooks, data, and publication surfaces.
+
+## Repository Shape
+
+```text
+src/fspp_workbench/                           reusable research infrastructure
+src/fspp_workbench/projects/sacrificial_debt/ Sacrificial Debt domain logic
+projects/sacrificial-debt/                    canonical project research assets
+publication/                                  Workbench website shell
+publication/engineering/                      Engineering subsite
+publication/projects/sacrificial-debt/        Sacrificial Debt subsite
+schemas/                                      checked-in generated JSON Schema
+tests/                                        guardrail and infrastructure tests
+```
+
+## Subsite Model
+
+The website is composed of independent Quarto projects that render into one GitHub Pages output tree.
+
+```text
+publication/_site/
+├── index.html
+├── engineering/
+└── projects/
+    └── sacrificial-debt/
+```
+
+Each subsite owns its own `_quarto.yml`, navigation, CSS, and content structure. Every subsite links back to the Workbench home.
+
+## Package Boundary
+
+Shared modules may define generic infrastructure for provenance, IDs, validation, evidence chains, claim audit, publication, and release reproducibility.
+
+Project modules may define project-specific schema, controlled vocabularies, state machines, and interpretation rules.
