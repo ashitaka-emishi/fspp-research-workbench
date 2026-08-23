@@ -4,6 +4,8 @@
 
 This directory contains the project-specific research assets. Shared infrastructure lives in `src/fspp_workbench/`. The rendered publication pages for this project live in the top-level Workbench website under `publication/projects/sacrificial-debt/`.
 
+Current controlled codebook: `codebook/CODEBOOK.md` v0.1.0.
+
 ## Research sequence
 
 ```text

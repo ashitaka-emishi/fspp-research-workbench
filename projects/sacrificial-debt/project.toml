@@ -1,7 +1,7 @@
 project_id = "sd"
 name = "Sacrificial Debt"
 status = "pilot"
-codebook_version = "0.2.0"
+codebook_version = "0.1.0"
 annotation_schema_version = "0.1.0"
 manual_first = true
 
