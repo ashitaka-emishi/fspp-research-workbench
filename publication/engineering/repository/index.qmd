@@ -20,7 +20,7 @@ Tracked SDLC work should use the Markdown templates in
 `fspp-issue-contract` marker with required sections for objective, scope,
 branch prefix, evidence, permissions, and stopping conditions.
 
-The older ad hoc issue-form scaffolding is intentionally not used for SDLC
+The older ad hoc issue-form templates are intentionally not used for SDLC
 work, because it does not carry the contract fields validated by the repository
 helper.
 

@@ -14,7 +14,7 @@ Sacrificial Debt mechanism.
 
 ## Current State
 
-As of the Milestone 1 pilot scaffold:
+As of the Milestone 1 pilot baseline:
 
 | Area | Current state | Canonical source |
 |---|---|---|

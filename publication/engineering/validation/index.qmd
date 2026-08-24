@@ -20,7 +20,7 @@ uv run fspp validate
 - `ruff check`: Python style, imports, modernization, and common bug patterns.
 - `pytest`: unit and guardrail tests.
 - `fspp schema check`: checked-in JSON Schemas match the current Pydantic models.
-- `fspp validate`: canonical scaffold data and referential integrity.
+- `fspp validate`: canonical workbench data and referential integrity.
 
 ## Research-Sensitive Changes
 

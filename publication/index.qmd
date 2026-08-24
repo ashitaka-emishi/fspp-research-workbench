@@ -6,6 +6,16 @@ This website is the top-level publication surface for the **FSPP Research Workbe
 
 Canonical evidence remains in the repository's project data and research files. The website is a rendered snapshot for review, publication, and audit.
 
+## Workbench Status
+
+| Area | Status |
+|---|---|
+| Repository | Public GitHub repository configured on `master` with pull-request validation. |
+| Publication | Top-level Quarto site plus independently configured Engineering and Sacrificial Debt subsites. |
+| Runtime | Python 3.14, Node.js 24 LTS, uv-managed virtual environment, Quarto publication build. |
+| Validation | Ruff, pytest, schema checks, canonical-data validation, and site rendering are active gates. |
+| Research posture | Manual-first pilot infrastructure; no automated extraction or released findings. |
+
 ## Research Projects
 
 ### [Sacrificial Debt](projects/sacrificial-debt/)
@@ -25,7 +35,14 @@ Sacrificial Debt is the first native project in the Workbench. It tests when per
 
 ### [Workbench Engineering](engineering/)
 
-The Engineering subsite documents runtime requirements, validation gates, publication builds, and shared/project boundaries for the reusable research infrastructure.
+The Engineering subsite documents the operational parts of the Workbench: runtime requirements, validation gates, publication builds, GitHub workflow, source/data boundaries, and the separation between shared infrastructure and project-specific research theory.
+
+| Area | Current State |
+|---|---|
+| Runtime environment | Project-local `.venv/` managed by `uv`, with checked-in version expectations. |
+| CI and validation | GitHub Actions runs lint, tests, schema freshness, and data validation on pull requests. |
+| Publication model | Quarto renders the Workbench home and each subsite independently for GitHub Pages. |
+| Agent workflow | `AGENTS.md` and the SDLC skill define branch, PR, review, merge, and closeout expectations for Codex first and Claude as backup. |
 
 ::: {.callout-note}
 Each subsite owns its own Quarto configuration, navigation, styling, and content. Additional projects, such as Lincoln Metaphor Analysis and Sacrifice Law, can be added as sibling subsites under `publication/projects/` when their workbench adapters or native project modules are ready.
