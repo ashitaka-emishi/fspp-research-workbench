@@ -62,6 +62,10 @@ directories and ensure they remain rebuildable from canonical sources.
 - Keep a human control point between pull request creation and merge. Do not
   merge or close issues unless the user explicitly asks for that workflow or has
   clearly delegated it.
+- Before closing issue-directed SDLC work, record exactly one marked closeout
+  comment on the GitHub issue using `.github/ISSUE_CLOSEOUT_TEMPLATE.md`. Plain
+  PR comments are useful review notes, but they are not issue closeout records
+  and are not counted by the milestone helper.
 - Use squash merge for pull requests unless the user explicitly overrides this
   rule for a specific PR.
 
@@ -334,19 +338,25 @@ Handle findings before PR creation:
 Only do this when the user explicitly asks, except for multi-issue batch
 commands where merge/close is already delegated.
 
-For goal-scoped work, re-inspect the issue and require one valid marked closeout
-comment before merge. A batch or persistent goal may authorize implementation,
-but it does not replace human closeout. Require explicit authorization for the
-final state change after closeout acceptance.
+For issue-directed work, re-inspect the issue and require exactly one valid
+marked closeout comment on the GitHub issue before merge and issue closure. Use
+`.github/ISSUE_CLOSEOUT_TEMPLATE.md`; fill in the human approver, acceptance
+time, accepted result, evidence reconciliation, remaining uncertainty, and the
+explicit final state change authorized by the user. A PR comment without the
+`fspp-closeout` marker does not satisfy closeout. A batch or persistent goal may
+authorize implementation, but it does not replace human closeout. Require
+explicit authorization for the final state change after closeout acceptance.
 
 1. Run `sdlc_state.py inspect-issue` again.
 2. Confirm the PR is approved or the user wants to merge despite pending review.
-3. Confirm required checks and relevant local validation passed, or report any
+3. Post the issue closeout comment, or verify the existing issue closeout is
+   valid with `sdlc_state.py inspect-issue`.
+4. Confirm required checks and relevant local validation passed, or report any
    skipped checks.
-4. Merge with squash merge.
-5. Confirm linked issues closed as expected.
-6. Update open same-milestone issues labeled `tracking` when applicable.
-7. Suggest the next recommended ticket without starting it, unless an accepted
+5. Merge with squash merge.
+6. Confirm linked issues closed as expected.
+7. Update open same-milestone issues labeled `tracking` when applicable.
+8. Suggest the next recommended ticket without starting it, unless an accepted
    milestone-scoped goal already delegates continuation after closeout.
 
 ## If Blocked

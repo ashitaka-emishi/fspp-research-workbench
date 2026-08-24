@@ -32,6 +32,17 @@ provenance, codebook, validation, or workflow documentation should update the
 relevant Quarto page in the same PR or explicitly explain why site parity is
 deferred.
 
+## Issue Closeout
+
+Before issue-directed SDLC work is merged and closed, the GitHub issue should
+receive exactly one marked closeout comment using
+`.github/ISSUE_CLOSEOUT_TEMPLATE.md`. The closeout records the human acceptance,
+evidence reconciliation, residual uncertainty, and authorized final state
+change.
+
+Plain PR comments can summarize review context, but they are not issue closeout
+records and are not counted by the milestone helper.
+
 ## Branch Protection
 
 `master` should require pull-request review and relevant status checks when the
