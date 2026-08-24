@@ -16,6 +16,8 @@ website:
         text: Environment
       - href: validation/index.qmd
         text: Validation
+      - href: repository/index.qmd
+        text: Repository
       - href: publication/index.qmd
         text: Publication
       - href: boundaries/index.qmd

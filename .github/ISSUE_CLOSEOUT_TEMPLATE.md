@@ -1,5 +1,7 @@
 <!-- fspp-closeout:v1 -->
-<!-- Complete after human review and post once as the final issue comment. -->
+<!-- Complete after human review and post exactly once as a GitHub issue
+comment. Do not post this only on the PR; the SDLC helper validates issue
+comments for milestone audit. -->
 
 ## Issue closeout
 

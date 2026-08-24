@@ -36,6 +36,12 @@ For website changes, also run:
 make site
 ```
 
+## Issues
+
+Use the Markdown issue templates under `.github/ISSUE_TEMPLATE/`. They contain
+the versioned `fspp-issue-contract` marker and required SDLC headings used by
+the repository helper. Do not use ad hoc issue forms for tracked SDLC work.
+
 ## Research Boundaries
 
 - Shared infrastructure belongs under `src/fspp_workbench/`.
@@ -51,6 +57,7 @@ Every PR that touches research data, schemas, codebook semantics, or publication
 - research consequence;
 - data/schema migration consequence;
 - reproducibility consequence;
+- static-site/publication consequence;
 - whether existing released records change meaning;
 - tests and validation run.
 
