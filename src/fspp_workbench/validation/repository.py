@@ -5,7 +5,7 @@ from pydantic import ValidationError
 
 from fspp_workbench.core.hashing import sha256_text
 from fspp_workbench.core.jsonl import read_jsonl
-from fspp_workbench.core.models import Document, Proposition, Segment, Source
+from fspp_workbench.core.models import Document, FullTextCapture, Proposition, Segment, Source
 from fspp_workbench.schema import MODELS
 
 Annotation = MODELS["sd-annotation"]
@@ -60,11 +60,103 @@ def _validate_coordinate_bounds(
         report.errors.append(f"{record_type} {record_id} char_end exceeds text length")
 
 
+def _capture_text_for_segment(
+    *,
+    segment: dict,
+    document_by_id: dict[str, dict],
+    page_capture_by_key: dict[tuple[str, str], dict],
+    document_capture_by_id: dict[str, dict],
+    source_capture_by_id: dict[str, dict],
+    label: str,
+    report: ValidationReport,
+) -> str | None:
+    coordinate_scope = segment.get("coordinate_scope", "segment_text")
+    if coordinate_scope == "segment_text":
+        return segment["text"]
+
+    document = document_by_id.get(segment["document_id"])
+    if document is None:
+        return None
+
+    if coordinate_scope == "page_text":
+        page_label = segment.get("page_label")
+        if not page_label:
+            report.errors.append(
+                f"{label}: Segment {segment['segment_id']} uses page_text coordinates "
+                "without page_label"
+            )
+            return None
+        capture = page_capture_by_key.get((segment["document_id"], page_label))
+    elif coordinate_scope == "document_text":
+        capture = document_capture_by_id.get(segment["document_id"])
+    elif coordinate_scope == "source_text":
+        capture = source_capture_by_id.get(document["source_id"])
+    else:
+        capture = None
+
+    if capture is None:
+        report.errors.append(
+            f"{label}: Segment {segment['segment_id']} has no matching "
+            f"{coordinate_scope} full text capture"
+        )
+        return None
+    return capture["text"]
+
+
+def _capture_text_for_proposition(
+    *,
+    proposition: dict,
+    segment_by_id: dict[str, dict],
+    document_by_id: dict[str, dict],
+    page_capture_by_key: dict[tuple[str, str], dict],
+    document_capture_by_id: dict[str, dict],
+    source_capture_by_id: dict[str, dict],
+    label: str,
+    report: ValidationReport,
+) -> str | None:
+    coordinate_scope = proposition.get("coordinate_scope", "segment_text")
+    if coordinate_scope == "segment_text":
+        return "\n".join(segment_by_id[x]["text"] for x in proposition["segment_ids"])
+
+    document = document_by_id.get(proposition["document_id"])
+    if document is None:
+        return None
+
+    if coordinate_scope == "page_text":
+        page_labels = {
+            segment_by_id[segment_id].get("page_label")
+            for segment_id in proposition["segment_ids"]
+        }
+        page_labels.discard(None)
+        if len(page_labels) != 1:
+            report.errors.append(
+                f"{label}: Proposition {proposition['proposition_id']} uses page_text "
+                "coordinates but referenced segments do not resolve to one page_label"
+            )
+            return None
+        capture = page_capture_by_key.get((proposition["document_id"], next(iter(page_labels))))
+    elif coordinate_scope == "document_text":
+        capture = document_capture_by_id.get(proposition["document_id"])
+    elif coordinate_scope == "source_text":
+        capture = source_capture_by_id.get(document["source_id"])
+    else:
+        capture = None
+
+    if capture is None:
+        report.errors.append(
+            f"{label}: Proposition {proposition['proposition_id']} has no matching "
+            f"{coordinate_scope} full text capture"
+        )
+        return None
+    return capture["text"]
+
+
 def _validate_record_set(
     *,
     label: str,
     sources: list[dict],
     docs: list[dict],
+    full_text_captures: list[dict] | None,
     segments: list[dict],
     props: list[dict],
     annotations: list[dict] | None = None,
@@ -76,7 +168,11 @@ def _validate_record_set(
     negative_evidence = negative_evidence or []
     rival_explanations = rival_explanations or []
     source_ids = {x["source_id"] for x in sources}
-    doc_ids = {x["document_id"] for x in docs}
+    document_by_id = {x["document_id"]: x for x in docs}
+    doc_ids = set(document_by_id)
+    page_capture_by_key: dict[tuple[str, str], dict] = {}
+    document_capture_by_id: dict[str, dict] = {}
+    source_capture_by_id: dict[str, dict] = {}
     segment_by_id = {x["segment_id"]: x for x in segments}
     segment_ids = set(segment_by_id)
     proposition_ids = {x["proposition_id"] for x in props}
@@ -87,6 +183,64 @@ def _validate_record_set(
                 f"{label}: Document {record['document_id']} references missing source "
                 f"{record['source_id']}"
             )
+    for record in full_text_captures or []:
+        if record["source_id"] not in source_ids:
+            report.errors.append(
+                f"{label}: Full text capture {record['full_text_capture_id']} references "
+                f"missing source {record['source_id']}"
+            )
+        document_id = record.get("document_id")
+        if document_id is not None:
+            document = document_by_id.get(document_id)
+            if document is None:
+                report.errors.append(
+                    f"{label}: Full text capture {record['full_text_capture_id']} "
+                    f"references missing document {document_id}"
+                )
+            elif document["source_id"] != record["source_id"]:
+                report.errors.append(
+                    f"{label}: Full text capture {record['full_text_capture_id']} source "
+                    "does not match its document source"
+                )
+        if record["text_hash"] != sha256_text(record["text"]):
+            report.errors.append(
+                f"{label}: Full text capture {record['full_text_capture_id']} text_hash mismatch"
+            )
+        coordinate_scope = record["coordinate_scope"]
+        if coordinate_scope == "page_text":
+            if document_id is None or not record.get("page_label"):
+                report.errors.append(
+                    f"{label}: Full text capture {record['full_text_capture_id']} "
+                    "with page_text scope requires document_id and page_label"
+                )
+            else:
+                key = (document_id, record["page_label"])
+                if key in page_capture_by_key:
+                    report.errors.append(
+                        f"{label}: Duplicate page_text full text capture for "
+                        f"document {document_id} page {record['page_label']}"
+                    )
+                page_capture_by_key[key] = record
+        elif coordinate_scope == "document_text":
+            if document_id is None:
+                report.errors.append(
+                    f"{label}: Full text capture {record['full_text_capture_id']} "
+                    "with document_text scope requires document_id"
+                )
+            else:
+                if document_id in document_capture_by_id:
+                    report.errors.append(
+                        f"{label}: Duplicate document_text full text capture for "
+                        f"document {document_id}"
+                    )
+                document_capture_by_id[document_id] = record
+        elif coordinate_scope == "source_text":
+            if record["source_id"] in source_capture_by_id:
+                report.errors.append(
+                    f"{label}: Duplicate source_text full text capture for source "
+                    f"{record['source_id']}"
+                )
+            source_capture_by_id[record["source_id"]] = record
     for record in segments:
         if record["document_id"] not in doc_ids:
             report.errors.append(
@@ -95,16 +249,33 @@ def _validate_record_set(
             )
         if record["text_hash"] != sha256_text(record["text"]):
             report.errors.append(f"{label}: Segment {record['segment_id']} text_hash mismatch")
+        coordinate_text = _capture_text_for_segment(
+            segment=record,
+            document_by_id=document_by_id,
+            page_capture_by_key=page_capture_by_key,
+            document_capture_by_id=document_capture_by_id,
+            source_capture_by_id=source_capture_by_id,
+            label=label,
+            report=report,
+        )
         _validate_coordinate_bounds(
             record_type=f"{label}: Segment",
             record_id=record["segment_id"],
             char_start=record.get("char_start"),
             char_end=record.get("char_end"),
-            text=record["text"]
-            if record.get("coordinate_scope", "segment_text") == "segment_text"
-            else None,
+            text=coordinate_text,
             report=report,
         )
+        if (
+            coordinate_text is not None
+            and record.get("char_start") is not None
+            and record.get("char_end") is not None
+            and coordinate_text[record["char_start"] : record["char_end"]] != record["text"]
+        ):
+            report.errors.append(
+                f"{label}: Segment {record['segment_id']} coordinate slice "
+                "does not match text"
+            )
     for record in props:
         if record["document_id"] not in doc_ids:
             report.errors.append(
@@ -124,8 +295,16 @@ def _validate_record_set(
                 f"{label}: Proposition {record['proposition_id']} exact_text is not "
                 "present in its referenced segment text"
             )
-        coordinate_scope = record.get("coordinate_scope", "segment_text")
-        coordinate_text = segment_text if coordinate_scope == "segment_text" else None
+        coordinate_text = _capture_text_for_proposition(
+            proposition=record,
+            segment_by_id=segment_by_id,
+            document_by_id=document_by_id,
+            page_capture_by_key=page_capture_by_key,
+            document_capture_by_id=document_capture_by_id,
+            source_capture_by_id=source_capture_by_id,
+            label=label,
+            report=report,
+        )
         _validate_coordinate_bounds(
             record_type=f"{label}: Proposition",
             record_id=record["proposition_id"],
@@ -135,10 +314,11 @@ def _validate_record_set(
             report=report,
         )
         if (
-            coordinate_scope == "segment_text"
+            coordinate_text is not None
             and record.get("char_start") is not None
             and record.get("char_end") is not None
-            and segment_text[record["char_start"] : record["char_end"]] != record["exact_text"]
+            and coordinate_text[record["char_start"] : record["char_end"]]
+            != record["exact_text"]
         ):
             report.errors.append(
                 f"{label}: Proposition {record['proposition_id']} coordinate slice "
@@ -181,6 +361,9 @@ def validate_project(root: Path) -> ValidationReport:
     data = root / "projects" / "sacrificial-debt" / "data"
     sources = _validate_file(data / "sources.jsonl", Source, report)
     docs = _validate_file(data / "documents.jsonl", Document, report)
+    full_text_captures = _validate_file(
+        data / "full-text-captures.jsonl", FullTextCapture, report
+    )
     segments = _validate_file(data / "segments.jsonl", Segment, report)
     props = _validate_file(data / "propositions.jsonl", Proposition, report)
     annotations = _validate_file(data / "annotations" / "reference.jsonl", Annotation, report)
@@ -193,6 +376,7 @@ def validate_project(root: Path) -> ValidationReport:
         label="canonical data",
         sources=sources,
         docs=docs,
+        full_text_captures=full_text_captures,
         segments=segments,
         props=props,
         annotations=annotations,
@@ -212,12 +396,16 @@ def validate_project(root: Path) -> ValidationReport:
     for fixture_dir in sorted(path for path in fixture_root.glob("*") if path.is_dir()):
         fixture_sources = _validate_file(fixture_dir / "sources.jsonl", Source, report)
         fixture_docs = _validate_file(fixture_dir / "documents.jsonl", Document, report)
+        fixture_full_text_captures = _validate_file(
+            fixture_dir / "full-text-captures.jsonl", FullTextCapture, report
+        )
         fixture_segments = _validate_file(fixture_dir / "segments.jsonl", Segment, report)
         fixture_props = _validate_file(fixture_dir / "propositions.jsonl", Proposition, report)
         _validate_record_set(
             label=f"segmentation fixture {fixture_dir.name}",
             sources=fixture_sources,
             docs=fixture_docs,
+            full_text_captures=fixture_full_text_captures,
             segments=fixture_segments,
             props=fixture_props,
             report=report,
