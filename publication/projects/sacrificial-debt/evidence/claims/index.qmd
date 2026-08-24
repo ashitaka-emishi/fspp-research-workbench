@@ -1,0 +1,20 @@
+---
+title: "Claims"
+---
+
+There are no promoted Sacrificial Debt research claims yet.
+
+Canonical file:
+[`claims.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/claims.jsonl)
+
+## Current State
+
+The current evidence packet is a pilot calibration record. It helps test
+provenance, segmentation, observation review, negative evidence, and rival
+explanation workflow. It does not release a finding or promote a claim.
+
+## Promotion Boundary
+
+A future claim page should appear only after a canonical claim record links to
+supporting, contradicting, and qualifying evidence, and after the project has
+recorded the required review state.

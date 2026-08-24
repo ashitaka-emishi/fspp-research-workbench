@@ -18,8 +18,18 @@ website:
         text: Status
       - href: corpus/index.qmd
         text: Corpus
-      - href: evidence/index.qmd
-        text: Evidence
+      - text: Evidence
+        menu:
+          - href: evidence/index.qmd
+            text: Overview
+          - href: evidence/packets/index.qmd
+            text: Packets
+          - href: evidence/negative-evidence/index.qmd
+            text: Negative Evidence
+          - href: evidence/rival-explanations/index.qmd
+            text: Rival Explanations
+          - href: evidence/claims/index.qmd
+            text: Claims
       - href: findings/index.qmd
         text: Findings
       - href: limitations/index.qmd

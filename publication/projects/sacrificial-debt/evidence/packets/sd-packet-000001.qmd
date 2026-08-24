@@ -1,0 +1,164 @@
+---
+title: "sd-packet-000001"
+subtitle: "Segall 1922 Pilot Calibration Packet"
+---
+
+::: {.callout-warning}
+This packet is a derived human-readable view of canonical JSONL records. It is
+reviewed for pilot calibration, not expert-adjudicated, not a released finding,
+and not strong Sacrificial Debt evidence.
+:::
+
+## Canonical Status
+
+| Field | Value |
+|---|---|
+| Packet role | Pilot calibration |
+| Review basis | Project-owner review |
+| Evidence function | Negative or qualifying evidence |
+| Mechanism status | No Sacrificial Debt mechanism claim promoted |
+| Coordinate scope | `segment_text` |
+| Full text capture | None committed for the historical source |
+
+The committed coordinate span is relative to the stored segment excerpt. It is
+not a page OCR coordinate. A page-, document-, or source-relative upgrade
+requires a rights-reviewed full-text capture record.
+
+## Source
+
+| Field | Value |
+|---|---|
+| Source ID | `sd-src-ger-segall-jewish-soldiers-1922` |
+| Title | Die deutschen Juden als Soldaten im Kriege 1914-1918 |
+| Author | Jacob Segall |
+| Source kind | Contemporary statistical response |
+| Corpus tier | `tier2` |
+| Repository | Internet Archive |
+| Source location | Internet Archive scanned public-domain text item |
+| URL | <https://archive.org/details/diedeutschenjude00segauoft> |
+| Publication year | 1922 |
+| Language | German |
+| Capture method | `static_html_scrape` metadata/source registration |
+| Redistribution status | Short source excerpts may be committed for pilot calibration after review; full scan/OCR requires separate approval. |
+
+Canonical file:
+[`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
+
+## Document
+
+| Field | Value |
+|---|---|
+| Document ID | `sd-doc-000001` |
+| Title | Segall summary of German Jewish war participation |
+| Document year | 1922 |
+| Evidence domain | `reception` |
+| Case | `sd-case-germany` |
+| Register | Statistical response |
+| Actors | `jacob-segall`, `ausschuss-fuer-kriegsstatistik` |
+| Audience | German public and Jewish communal organizations |
+| Lineage status | `reviewed` |
+
+Canonical file:
+[`documents.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/documents.jsonl)
+
+## Segment
+
+| Field | Value |
+|---|---|
+| Segment ID | `sd-seg-000001` |
+| Segment type | `paragraph` |
+| Page label | `38` |
+| Locator note | Summary section, item 1, page 38. |
+| Coordinate scope | `segment_text` |
+| Character span | `0-184` |
+| Lineage status | `reviewed` |
+
+> ca. 100 000 deutsche Juden haben am Feldzuge teilgenommen, das heißt, die jüdische Bevölkerung in Deutschland hat restlos den auf sie entfallenden Anteil an Kriegsteilnehmern gestellt.
+
+Canonical file:
+[`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/segments.jsonl)
+
+## Proposition
+
+| Field | Value |
+|---|---|
+| Proposition ID | `sd-prop-000001` |
+| Segment IDs | `sd-seg-000001` |
+| Coordinate scope | `segment_text` |
+| Character span | `0-184` |
+| Lineage status | `reviewed` |
+
+This proposition records Segall's summary that German Jews supplied their
+proportional share of military participants. It is reviewed pilot-calibration
+evidence for negative or qualifying use against allegations that German Jews
+failed to contribute militarily.
+
+Canonical file:
+[`propositions.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/propositions.jsonl)
+
+## Observation Coding
+
+| Field | Value |
+|---|---|
+| Annotation ID | `sd-ann-000001` |
+| Codebook version | `0.1.0` |
+| Coder | `project-owner` |
+| State | `observation_reviewed` |
+| Collective object | German Jewish population |
+| Sacrificers | `german-jewish-war-participants` |
+| Sacrifice type | `military_service` |
+| Explicit comparison | `yes` |
+| Moral value of sacrifice | military participation; proportional contribution |
+| Interpretation layer | Not attached |
+
+The annotation identifies observable textual structure only. It does not claim
+that the text expresses Sacrificial Debt logic.
+
+Canonical file:
+[`annotations/reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl)
+
+## Negative Evidence
+
+| Field | Value |
+|---|---|
+| Negative evidence ID | `sd-neg-000001` |
+| Type | `contribution_reclassification` |
+| Strength | `moderate` |
+| Review status | `reviewed` |
+| Hypothesis IDs | `SD-GER-JUDENZAEHLUNG` |
+| Falsification tests | `F-dischargeability`, `F-contribution-reclassification` |
+
+Segall's statistical summary qualifies later claims that German Jews failed to
+provide proportional military contribution. A later non-dischargeability claim
+would need separate actor-source evidence showing accusations persisted despite
+available contribution evidence.
+
+Canonical file:
+[`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
+
+## Rival Explanation
+
+| Field | Value |
+|---|---|
+| Rival explanation ID | `sd-rival-000001` |
+| Explanation type | Statistical rebuttal to Jewish shirking allegations |
+| Interaction with Sacrificial Debt | `competing` |
+| Support status | `supported` |
+| Review status | `reviewed` |
+| Evidence refs | `sd-prop-000001` |
+
+The rival explanation treats documented proportional participation as a
+competing or qualifying account. It prevents the project from inferring
+non-dischargeability merely from the existence of a shirking allegation.
+
+Canonical file:
+[`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
+
+## Limitations
+
+- This packet uses one source and one proposition.
+- It is not perpetrator rhetoric.
+- It is not policy evidence.
+- It does not establish reception by later actors.
+- It does not authorize a released Sacrificial Debt claim.
+- Full page OCR coordinates are not committed for this historical source.

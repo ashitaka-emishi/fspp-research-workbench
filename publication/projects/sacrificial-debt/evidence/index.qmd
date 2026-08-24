@@ -2,33 +2,41 @@
 title: "Evidence Audit"
 ---
 
-The evidence audit surface is still provisional. Canonical evidence records live
-in the project data files and must validate before they are used in claims,
-publication tables, or exported evidence chains.
+The evidence audit surface renders selected review packets from canonical JSONL
+records. These pages are for human review and navigation; they are not the
+canonical evidence store.
 
-## Pilot Calibration Packet
+Canonical evidence records live in `projects/sacrificial-debt/data/` and must
+validate before they are used in claims, publication tables, or exported
+evidence chains.
 
-Issue #5 introduces the first real-source calibration candidate. It uses Jacob
-Segall's 1922 statistical study of German Jewish soldiers as a
-Germany/Judenzaehlung counterevidence source.
+## Sections
 
-This packet is intentionally cautious:
+- [Packets](packets/) lists rendered evidence review packets.
+- [Negative Evidence](negative-evidence/) summarizes records that weaken,
+  qualify, or falsify proposed mechanism claims.
+- [Rival Explanations](rival-explanations/) summarizes competing explanations
+  linked to propositions or evidence references.
+- [Claims](claims/) will list promoted research claims when any exist.
 
-- the source, document, segment, and proposition records are project-owner
-  reviewed for pilot calibration;
-- the annotation is `observation_reviewed`;
-- the negative-evidence and rival-explanation records are reviewed for pilot
-  calibration;
-- the packet is not an expert-adjudicated scholarly gold standard;
-- no interpretation layer or strong Sacrificial Debt evidence claim is attached.
+## Current Packet
 
-The candidate proposition is used to test whether documented German Jewish war
-participation should qualify, weaken, or rival allegations of shirking. It is
-not coded as strong Sacrificial Debt evidence, and it is not perpetrator
-rhetoric.
+The first rendered packet is the Segall 1922 pilot calibration packet:
 
-Canonical files:
+[sd-packet-000001](packets/sd-packet-000001.qmd)
 
+It uses Jacob Segall's 1922 statistical study of German Jewish soldiers as a
+Germany/Judenzaehlung counterevidence source. The packet is reviewed for pilot
+calibration, not expert-adjudicated, not a released finding, and not strong
+Sacrificial Debt evidence.
+
+## Canonical Files
+
+- [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
+- [`documents.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/documents.jsonl)
+- [`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/segments.jsonl)
+- [`propositions.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/propositions.jsonl)
 - [`annotations/reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl)
 - [`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
 - [`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
+- [`claims.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/claims.jsonl)
