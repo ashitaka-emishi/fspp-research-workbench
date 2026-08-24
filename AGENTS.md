@@ -147,6 +147,13 @@ For Quarto publication or navigation changes, also run:
 make site
 ```
 
+When a PR changes research policy, provenance rules, codebook semantics,
+architecture decisions, validation/release behavior, public-facing project
+state, or user-facing documentation, check whether the Quarto static site needs
+a lock-step update. If the site should not change, state that explicitly in the
+PR. If it should change, update the relevant `publication/` page in the same PR
+and run `make site`.
+
 Add tests for new methodological constraints. Prefer semantic module names over numbered pipeline stages. Keep scripts thin; reusable logic belongs in `src/fspp_workbench`.
 
 ## 11. Pull requests
@@ -156,5 +163,6 @@ Every PR touching research data, schemas, or codebook semantics must state:
 - research consequence;
 - data/schema migration consequence;
 - reproducibility consequence;
+- static-site/publication consequence;
 - whether existing released records change meaning;
 - tests/validation run.

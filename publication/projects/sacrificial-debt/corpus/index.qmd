@@ -2,7 +2,7 @@
 title: "Corpus"
 ---
 
-This page summarizes the current corpus-planning state for the Sacrificial Debt pilot. Canonical source records will live in the project data files after provenance, rights, and checksum review.
+This page summarizes the current corpus-planning and provenance state for the Sacrificial Debt pilot. Canonical source records live in the project data files after provenance, rights, and checksum review.
 
 ## Manual Pilot Scope
 
@@ -13,3 +13,41 @@ The pilot corpus deliberately guards against Koenigsberg-confirmation bias. Hitl
 Canonical planning manifest:
 
 - [`manual-pilot-corpus-v0.1.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/manifests/manual-pilot-corpus-v0.1.md)
+
+## Seed Provenance Records
+
+The first seed records are metadata-only source records. They identify bounded
+Germany-first source leads, but they do not ingest raw source text, scans, PDFs,
+critical apparatus, document records, segments, propositions, or annotations.
+
+Canonical source records:
+
+- [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
+
+Source records now distinguish:
+
+- corpus tier;
+- canonical URL;
+- human-readable source location name;
+- access datetime;
+- capture method;
+- checksum scope;
+- local path when a working copy exists;
+- rights and redistribution status;
+- original-language and translation provenance.
+
+Capture methods separate downloaded files, static HTML scrapes,
+browser-rendered captures, OCR text, manual transcription, and manual metadata
+review. This matters for web pages whose usable text appears only after
+JavaScript rendering, and for scans or images that require OCR or transcription.
+
+Rights determine whether captured source material can be committed. Public-domain,
+openly licensed, or otherwise redistributable captures may be kept in Git.
+Copyrighted, restricted, rights-uncertain, sensitive, or oversized local working
+copies remain gitignored and must be listed in the reacquisition log:
+
+- [`GITIGNORED_SOURCES.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/provenance/GITIGNORED_SOURCES.md)
+
+Provenance policy:
+
+- [`corpus/provenance/README.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/provenance/README.md)

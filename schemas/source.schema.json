@@ -1,5 +1,14 @@
 {
   "$defs": {
+    "CorpusTier": {
+      "enum": [
+        "tier1",
+        "tier2",
+        "tier3"
+      ],
+      "title": "CorpusTier",
+      "type": "string"
+    },
     "Lineage": {
       "additionalProperties": false,
       "properties": {
@@ -56,6 +65,11 @@
   },
   "additionalProperties": false,
   "properties": {
+    "accessed_at": {
+      "format": "date-time",
+      "title": "Accessed At",
+      "type": "string"
+    },
     "acquisition_date": {
       "format": "date",
       "title": "Acquisition Date",
@@ -97,6 +111,27 @@
       "default": null,
       "title": "Canonical Url"
     },
+    "capture_method": {
+      "enum": [
+        "manual_metadata_review",
+        "downloaded_file",
+        "static_html_scrape",
+        "browser_rendered_capture",
+        "ocr_text",
+        "manual_transcription"
+      ],
+      "title": "Capture Method",
+      "type": "string"
+    },
+    "checksum_scope": {
+      "enum": [
+        "local_file",
+        "remote_file",
+        "metadata_record"
+      ],
+      "title": "Checksum Scope",
+      "type": "string"
+    },
     "checksum_sha256": {
       "pattern": "^[a-f0-9]{64}$",
       "title": "Checksum Sha256",
@@ -105,6 +140,9 @@
     "copyright_status": {
       "title": "Copyright Status",
       "type": "string"
+    },
+    "corpus_tier": {
+      "$ref": "#/$defs/CorpusTier"
     },
     "edition": {
       "anyOf": [
@@ -136,6 +174,18 @@
       ],
       "default": null,
       "title": "Local Path"
+    },
+    "original_language": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Original Language"
     },
     "provenance_notes": {
       "anyOf": [
@@ -186,6 +236,18 @@
       "title": "Source Kind",
       "type": "string"
     },
+    "source_location_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Location Name"
+    },
     "source_reliability": {
       "enum": [
         "high",
@@ -199,14 +261,67 @@
     "title": {
       "title": "Title",
       "type": "string"
+    },
+    "translation_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Translation Notes"
+    },
+    "translation_source_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Translation Source Id"
+    },
+    "translation_status": {
+      "default": "unknown",
+      "enum": [
+        "original_language",
+        "human_translation",
+        "machine_translation",
+        "mixed_translation",
+        "not_applicable",
+        "unknown"
+      ],
+      "title": "Translation Status",
+      "type": "string"
+    },
+    "translator": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Translator"
     }
   },
   "required": [
     "source_id",
     "title",
     "source_kind",
+    "corpus_tier",
     "acquisition_date",
+    "accessed_at",
+    "capture_method",
     "checksum_sha256",
+    "checksum_scope",
     "language",
     "copyright_status",
     "redistribution_status",

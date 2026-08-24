@@ -24,16 +24,40 @@ class Source(StrictModel):
     source_id: str
     title: str
     source_kind: str
+    corpus_tier: CorpusTier
     archival_citation: str | None = None
     bibliographic_citation: str | None = None
     canonical_url: str | None = None
     local_path: str | None = None
+    source_location_name: str | None = None
     repository: str | None = None
     edition: str | None = None
     publication_date: date | None = None
     acquisition_date: date
+    accessed_at: datetime
+    capture_method: Literal[
+        "manual_metadata_review",
+        "downloaded_file",
+        "static_html_scrape",
+        "browser_rendered_capture",
+        "ocr_text",
+        "manual_transcription",
+    ]
     checksum_sha256: str = Field(pattern=SHA256)
+    checksum_scope: Literal["local_file", "remote_file", "metadata_record"]
     language: str
+    original_language: str | None = None
+    translation_status: Literal[
+        "original_language",
+        "human_translation",
+        "machine_translation",
+        "mixed_translation",
+        "not_applicable",
+        "unknown",
+    ] = "unknown"
+    translator: str | None = None
+    translation_source_id: str | None = None
+    translation_notes: str | None = None
     copyright_status: str
     redistribution_status: str
     source_reliability: Literal["high", "medium", "low", "uncertain"]
