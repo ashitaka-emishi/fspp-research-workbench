@@ -34,7 +34,7 @@ def test_interpretation_forbidden_before_observation_lock() -> None:
         Annotation.model_validate({
             "annotation_id":"sd-ann-000001", "proposition_id":"sd-prop-000001",
             "state":"observation_draft", "observation":OBS, "interpretation":INTERP,
-            "coder_id":"coder-a", "codebook_version":"0.2.0"
+            "coder_id":"coder-a", "codebook_version":"0.1.0"
         })
 
 
@@ -44,7 +44,30 @@ def test_strong_debt_requires_explicit_comparison() -> None:
         Annotation.model_validate({
             "annotation_id":"sd-ann-000001", "proposition_id":"sd-prop-000001",
             "state":"reference_reviewed", "observation":bad_obs, "interpretation":INTERP,
-            "coder_id":"coder-a", "codebook_version":"0.2.0"
+            "coder_id":"coder-a", "codebook_version":"0.1.0"
+        })
+
+
+def test_strong_debt_requires_identifiable_sacrifice() -> None:
+    bad_obs = {**OBS, "sacrifice_types":[]}
+    with pytest.raises(ValidationError):
+        Annotation.model_validate({
+            "annotation_id":"sd-ann-000001", "proposition_id":"sd-prop-000001",
+            "state":"reference_reviewed", "observation":bad_obs, "interpretation":INTERP,
+            "coder_id":"coder-a", "codebook_version":"0.1.0"
+        })
+
+
+def test_strong_debt_requires_reciprocal_obligation() -> None:
+    bad_interp = {
+        **INTERP,
+        "accounting": {**INTERP["accounting"], "reciprocal_obligation": False},
+    }
+    with pytest.raises(ValidationError):
+        Annotation.model_validate({
+            "annotation_id":"sd-ann-000001", "proposition_id":"sd-prop-000001",
+            "state":"reference_reviewed", "observation":OBS, "interpretation":bad_interp,
+            "coder_id":"coder-a", "codebook_version":"0.1.0"
         })
 
 
@@ -52,6 +75,6 @@ def test_valid_strong_annotation() -> None:
     record = Annotation.model_validate({
         "annotation_id":"sd-ann-000001", "proposition_id":"sd-prop-000001",
         "state":"reference_reviewed", "observation":OBS, "interpretation":INTERP,
-        "coder_id":"coder-a", "codebook_version":"0.2.0"
+        "coder_id":"coder-a", "codebook_version":"0.1.0"
     })
     assert record.interpretation is not None

@@ -2,4 +2,21 @@
 title: "Limitations and Negative Evidence"
 ---
 
-Scaffold page. Replace with generated/reviewed project content as the pilot develops.
+The v0.1.0 codebook is locked for the manual pilot, not for final publication
+claims. It does not approve substantive findings about Germany, Koenigsberg, or
+any comparison case.
+
+The Germany-first corpus is a mechanism-discovery sequence. It must not become
+a confirmation path for inherited interpretations. Negative evidence and rival
+explanations are first-class records, including successful discharge, veteran
+protection, contribution reclassification, absent expected rhetoric, coercion
+without debt, debt without coercion, explicit rejection, chronology
+contradiction, and actor inconsistency.
+
+Absence claims require a documented search scope. Rhetoric alone does not prove
+reception, and rhetoric or reception alone does not prove policy causation.
+
+The following remain provisional: reliability thresholds, whether etic-only
+evidence can support strong published claims, the approval rule for decisive
+evidence, reception-evidence minimums, policy-causation minimums, translation
+authority, and source storage or external model-processing policy.

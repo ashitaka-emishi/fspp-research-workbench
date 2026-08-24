@@ -2,4 +2,25 @@
 title: "Methods"
 ---
 
-Scaffold page. Replace with generated/reviewed project content as the pilot develops.
+The Sacrificial Debt manual pilot uses `codebook/CODEBOOK.md` v0.1.0 as its
+controlled coding protocol.
+
+The principal interpretive unit is the proposition. Each proposition must
+resolve to stable source coordinates before it can become pilot evidence.
+
+Manual coding proceeds in two layers:
+
+1. Observation records visible textual structure: collective object,
+   sacrificers, sacrifice type, alleged survivor or beneficiary, explicit
+   comparison, valuation, actor, audience, and date.
+2. Interpretation begins only after observation lock and records sacrificial
+   asymmetry, creditor/debtor logic, reciprocal obligation, essentialization,
+   dischargeability, sanction logic, causal role, rival explanations, and
+   evidence strength.
+
+Strong Sacrificial Debt evidence requires all three parts of the A+B+C rule:
+identifiable sacrifice, explicit comparison, and a normative implication of
+owing, repayment, deserved loss, required contribution, or legitimate sanction.
+
+Rhetoric, reception, and policy remain separate evidence domains. Evidence in
+one domain does not automatically establish another.
