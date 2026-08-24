@@ -6,7 +6,7 @@ Rival explanations record competing, qualifying, or alternative accounts for an
 evidence pattern. They keep mechanism testing from becoming confirmation-only.
 
 Canonical file:
-[`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
+[`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
 
 ## Current Records
 

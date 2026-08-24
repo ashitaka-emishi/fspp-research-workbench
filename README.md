@@ -2,9 +2,9 @@
 
 This repository is the **reusable research environment** for the Foundation for the Study of Political Pathology. It begins with the **Sacrificial Debt** research program, but its shared infrastructure is intentionally project-agnostic so that Lincoln, Sacrifice Law, and future projects can converge on one auditable research architecture.
 
-Website: <https://ashitaka-emishi.github.io/fspp-research-wrokbench/>
+Website: <https://ashitaka-emishi.github.io/fspp-research-workbench/>
 
-Repository: <https://github.com/ashitaka-emishi/fspp-research-wrokbench>
+Repository: <https://github.com/ashitaka-emishi/fspp-research-workbench>
 
 ## Why this repo exists
 

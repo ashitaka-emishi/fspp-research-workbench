@@ -22,7 +22,7 @@ Important SDLC defaults:
 - State helper:
 
 ```bash
-python3 .agents/skills/sdlc-workflow/scripts/sdlc_state.py inspect-issue <N> --repo ashitaka-emishi/fspp-research-wrokbench --cwd .
+python3 .agents/skills/sdlc-workflow/scripts/sdlc_state.py inspect-issue <N> --repo ashitaka-emishi/fspp-research-workbench --cwd .
 ```
 
 - Codex-authored commits use:

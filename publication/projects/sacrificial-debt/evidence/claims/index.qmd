@@ -5,7 +5,7 @@ title: "Claims"
 There are no promoted Sacrificial Debt research claims yet.
 
 Canonical file:
-[`claims.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/claims.jsonl)
+[`claims.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/claims.jsonl)
 
 ## Current State
 

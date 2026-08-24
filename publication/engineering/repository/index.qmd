@@ -7,9 +7,9 @@ public engineering control surface for the Workbench.
 
 ## Defaults
 
-- Repository: <https://github.com/ashitaka-emishi/fspp-research-wrokbench>
+- Repository: <https://github.com/ashitaka-emishi/fspp-research-workbench>
 - Default branch: `master`
-- Published site: <https://ashitaka-emishi.github.io/fspp-research-wrokbench/>
+- Published site: <https://ashitaka-emishi.github.io/fspp-research-workbench/>
 - Pages source: GitHub Actions
 - Normal merge method: squash merge
 

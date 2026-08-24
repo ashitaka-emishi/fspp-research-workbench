@@ -42,7 +42,7 @@ requires a rights-reviewed full-text capture record.
 | Redistribution status | Short source excerpts may be committed for pilot calibration after review; full scan/OCR requires separate approval. |
 
 Canonical file:
-[`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
+[`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
 
 ## Document
 
@@ -59,7 +59,7 @@ Canonical file:
 | Lineage status | `reviewed` |
 
 Canonical file:
-[`documents.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/documents.jsonl)
+[`documents.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/documents.jsonl)
 
 ## Segment
 
@@ -76,7 +76,7 @@ Canonical file:
 > ca. 100 000 deutsche Juden haben am Feldzuge teilgenommen, das heißt, die jüdische Bevölkerung in Deutschland hat restlos den auf sie entfallenden Anteil an Kriegsteilnehmern gestellt.
 
 Canonical file:
-[`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/segments.jsonl)
+[`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/segments.jsonl)
 
 ## Proposition
 
@@ -94,7 +94,7 @@ evidence for negative or qualifying use against allegations that German Jews
 failed to contribute militarily.
 
 Canonical file:
-[`propositions.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/propositions.jsonl)
+[`propositions.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/propositions.jsonl)
 
 ## Observation Coding
 
@@ -115,7 +115,7 @@ The annotation identifies observable textual structure only. It does not claim
 that the text expresses Sacrificial Debt logic.
 
 Canonical file:
-[`annotations/reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl)
+[`annotations/reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl)
 
 ## Negative Evidence
 
@@ -134,7 +134,7 @@ would need separate actor-source evidence showing accusations persisted despite
 available contribution evidence.
 
 Canonical file:
-[`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
+[`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
 
 ## Rival Explanation
 
@@ -152,7 +152,7 @@ competing or qualifying account. It prevents the project from inferring
 non-dischargeability merely from the existence of a shirking allegation.
 
 Canonical file:
-[`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
+[`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
 
 ## Limitations
 

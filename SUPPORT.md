@@ -2,7 +2,7 @@
 
 For project questions, use GitHub issues after the repository is published:
 
-<https://github.com/ashitaka-emishi/fspp-research-wrokbench/issues>
+<https://github.com/ashitaka-emishi/fspp-research-workbench/issues>
 
 Use the issue templates to distinguish implementation tasks from research-engineering decisions.
 

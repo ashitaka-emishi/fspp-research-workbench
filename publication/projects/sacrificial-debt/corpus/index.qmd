@@ -12,7 +12,7 @@ The pilot corpus deliberately guards against Koenigsberg-confirmation bias. Hitl
 
 Canonical planning manifest:
 
-- [`manual-pilot-corpus-v0.1.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/manifests/manual-pilot-corpus-v0.1.md)
+- [`manual-pilot-corpus-v0.1.md`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/corpus/manifests/manual-pilot-corpus-v0.1.md)
 
 ## Seed Provenance Records
 
@@ -22,7 +22,7 @@ critical apparatus, document records, segments, propositions, or annotations.
 
 Canonical source records:
 
-- [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
+- [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
 
 Source records now distinguish:
 
@@ -46,11 +46,11 @@ openly licensed, or otherwise redistributable captures may be kept in Git.
 Copyrighted, restricted, rights-uncertain, sensitive, or oversized local working
 copies remain gitignored and must be listed in the reacquisition log:
 
-- [`GITIGNORED_SOURCES.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/provenance/GITIGNORED_SOURCES.md)
+- [`GITIGNORED_SOURCES.md`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/corpus/provenance/GITIGNORED_SOURCES.md)
 
 Provenance policy:
 
-- [`corpus/provenance/README.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/provenance/README.md)
+- [`corpus/provenance/README.md`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/corpus/provenance/README.md)
 
 ## Segmentation Fixtures
 
@@ -64,5 +64,5 @@ Synthetic fixture text must not be coded as a Sacrificial Debt source claim.
 
 Canonical fixture documentation:
 
-- [`corpus/segmented/README.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/segmented/README.md)
-- [`stable-id-v0.1`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/tree/master/projects/sacrificial-debt/corpus/segmented/fixtures/stable-id-v0.1)
+- [`corpus/segmented/README.md`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/corpus/segmented/README.md)
+- [`stable-id-v0.1`](https://github.com/ashitaka-emishi/fspp-research-workbench/tree/master/projects/sacrificial-debt/corpus/segmented/fixtures/stable-id-v0.1)

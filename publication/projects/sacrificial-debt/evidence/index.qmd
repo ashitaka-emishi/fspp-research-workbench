@@ -32,11 +32,11 @@ Sacrificial Debt evidence.
 
 ## Canonical Files
 
-- [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
-- [`documents.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/documents.jsonl)
-- [`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/segments.jsonl)
-- [`propositions.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/propositions.jsonl)
-- [`annotations/reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl)
-- [`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
-- [`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
-- [`claims.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/claims.jsonl)
+- [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/sources.jsonl)
+- [`documents.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/documents.jsonl)
+- [`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/segments.jsonl)
+- [`propositions.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/propositions.jsonl)
+- [`annotations/reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl)
+- [`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
+- [`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
+- [`claims.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/claims.jsonl)

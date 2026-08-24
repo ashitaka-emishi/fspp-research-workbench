@@ -27,6 +27,6 @@ The prospectus establishes the project's initial research contract:
 
 The controlled source text remains in the repository design materials:
 
-- [Sacrificial Debt Research Program Prospectus v0.2](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/docs/design/source/FSPP_Sacrificial_Debt_Research_Program_Prospectus_v0.2.txt)
+- [Sacrificial Debt Research Program Prospectus v0.2](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/docs/design/source/FSPP_Sacrificial_Debt_Research_Program_Prospectus_v0.2.txt)
 
 The prospectus informs this subsite, but canonical project definitions still flow through the versioned research files and codebook.
