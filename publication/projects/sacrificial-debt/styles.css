@@ -46,11 +46,18 @@ h6,
   color: var(--fspp-parchment) !important;
 }
 
+.navbar .dropdown-menu {
+  background: var(--fspp-black);
+  border: 2px solid var(--fspp-maroon);
+  border-radius: 0;
+}
+
 .navbar .nav-link:hover,
 .navbar .nav-link.active,
-.navbar .dropdown-item:hover {
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
   color: #ffffff !important;
-  background: rgba(128, 0, 0, 0.4);
+  background: var(--fspp-maroon);
 }
 
 #quarto-content {

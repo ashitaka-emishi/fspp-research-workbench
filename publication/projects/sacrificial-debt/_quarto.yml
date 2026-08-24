@@ -36,7 +36,7 @@ website:
         text: Limitations
     right:
       - icon: house-door
-        href: ../../index.html
+        href: "https://ashitaka-emishi.github.io/fspp-research-wrokbench/"
         aria-label: Workbench Home
       - icon: github
         href: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"

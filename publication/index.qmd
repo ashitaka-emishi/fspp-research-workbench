@@ -12,6 +12,15 @@ Canonical evidence remains in the repository's project data and research files. 
 
 Sacrificial Debt is the first native project in the Workbench. It tests when perceived exemption from collective sacrifice can become an attributed political debt and under what additional conditions that debt becomes essentialized, non-dischargeable, or coercively collected.
 
+| Field | Current State |
+|---|---|
+| Milestone status | Milestone 1 pilot infrastructure is ready for closeout review. |
+| Pilot scope | Germany-first manual pilot, with contrast cases deferred. |
+| Evidence state | One project-owner reviewed Segall 1922 calibration packet is rendered for audit. |
+| Claim state | No released findings or promoted Sacrificial Debt claims. |
+| Data authority | Canonical JSONL, codebook, corpus, and research files remain authoritative. |
+| Next research need | More rights-reviewed source captures, manually reviewed propositions, reliability/adjudication workflow, and evidence chains. |
+
 ## Engineering
 
 ### [Workbench Engineering](engineering/)
