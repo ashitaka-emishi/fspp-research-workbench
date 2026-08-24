@@ -253,6 +253,13 @@ resource manifests, or tests. For documentation-only changes, at minimum run
 `git diff --check`; run full validation when docs describe executable behavior,
 schemas, resource policy, or release gates.
 
+When a change alters research policy, provenance rules, codebook semantics,
+architecture decisions, validation/release behavior, public-facing project
+state, or user-facing documentation, check whether the Quarto static site needs
+a lock-step update. If publication should not change, record that explicitly in
+the PR. If publication should change, update the relevant `publication/` page in
+the same PR and run `make site`.
+
 ## Pre-PR Review
 
 Before opening a pull request, perform a code review over the intended PR diff.
@@ -264,6 +271,10 @@ Review should also ask whether the change preserved purpose, intent, evidence,
 human authority, and visible uncertainty. Do not treat more artifacts as better
 by default; keep only artifacts that constrain consequential action, record a
 meaningful decision, provide useful evidence, or reduce material risk.
+
+Review must also check static-site parity: public-facing research, provenance,
+codebook, architecture, validation, or project-status changes should either be
+reflected in the relevant Quarto page or explicitly deferred with a reason.
 
 Handle findings before PR creation:
 
@@ -298,6 +309,7 @@ Handle findings before PR creation:
    - linked issue, using `Closes #N` only when merge should close it;
    - summary of changes;
    - validation commands and results;
+   - static-site/publication consequence;
    - known limitations or follow-up work;
    - any unresolved uncertainty or accepted risk.
 5. Stop after PR creation unless the user explicitly asks to merge. In a
