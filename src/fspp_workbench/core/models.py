@@ -7,6 +7,14 @@ from .enums import CorpusTier, EvidenceDomain, EvidenceRelation, RecordStatus
 
 SHA256 = r"^[a-f0-9]{64}$"
 CoordinateScope = Literal["segment_text", "page_text", "document_text", "source_text"]
+FullTextCoordinateScope = Literal["page_text", "document_text", "source_text"]
+CaptureMethod = Literal[
+    "downloaded_file",
+    "static_html_scrape",
+    "browser_rendered_capture",
+    "ocr_text",
+    "manual_transcription",
+]
 
 
 class StrictModel(BaseModel):
@@ -79,6 +87,25 @@ class Document(StrictModel):
     corpus_tier: CorpusTier
     case_id: str
     discourse_register: str | None = Field(default=None, alias="register")
+    lineage: Lineage = Field(default_factory=Lineage)
+
+
+class FullTextCapture(StrictModel):
+    full_text_capture_id: str
+    source_id: str
+    document_id: str | None = None
+    coordinate_scope: FullTextCoordinateScope
+    text: str
+    text_hash: str = Field(pattern=SHA256)
+    page_label: str | None = None
+    canonical_url: str | None = None
+    source_location_name: str | None = None
+    local_path: str | None = None
+    capture_method: CaptureMethod
+    captured_at: datetime
+    copyright_status: str
+    redistribution_status: str
+    capture_notes: str | None = None
     lineage: Lineage = Field(default_factory=Lineage)
 
 

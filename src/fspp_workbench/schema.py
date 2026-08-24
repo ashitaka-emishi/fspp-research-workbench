@@ -1,7 +1,14 @@
 import json
 from pathlib import Path
 
-from fspp_workbench.core.models import Document, Proposition, RunManifest, Segment, Source
+from fspp_workbench.core.models import (
+    Document,
+    FullTextCapture,
+    Proposition,
+    RunManifest,
+    Segment,
+    Source,
+)
 from fspp_workbench.projects.sacrificial_debt.models import (
     Adjudication,
     Annotation,
@@ -14,6 +21,7 @@ from fspp_workbench.projects.sacrificial_debt.models import (
 MODELS = {
     "source": Source,
     "document": Document,
+    "full-text-capture": FullTextCapture,
     "segment": Segment,
     "proposition": Proposition,
     "run-manifest": RunManifest,

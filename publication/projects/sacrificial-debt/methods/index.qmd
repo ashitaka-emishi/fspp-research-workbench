@@ -13,6 +13,12 @@ a full page, a full document, or a complete source capture.
 Records may also include `locator_note` for human-readable page, section,
 table, item, or folio guidance.
 
+Full page, document, and source coordinate scopes require a matching
+`full-text-captures.jsonl` record with captured text, hash, capture method,
+capture time, and rights/redistribution status. The current Segall calibration
+packet remains `segment_text` scoped because the committed evidence is a
+reviewed excerpt, not a rights-reviewed full page OCR capture.
+
 Manual coding proceeds in two layers:
 
 1. Observation records visible textual structure: collective object,

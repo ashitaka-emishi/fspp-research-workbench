@@ -21,10 +21,24 @@ When only a short excerpt is committed, use `segment_text` and say so in the
 lineage note. Do not imply page- or document-relative coordinates until the
 corresponding full text is captured, reviewed, and hashable.
 
+Full page, document, and source text captures are recorded in
+`projects/sacrificial-debt/data/full-text-captures.jsonl` for canonical project
+data and in each fixture directory's `full-text-captures.jsonl` for synthetic
+validation records. A full-text capture stores the captured text, hash, source
+or document relationship, capture method, capture time, rights/redistribution
+status, and lineage. Segment and proposition coordinates with `page_text`,
+`document_text`, or `source_text` scope must slice-match a corresponding
+full-text capture.
+
 Use `locator_note` for human-readable location help, such as section heading,
 item number, page label, table number, paragraph label, or archival folio
 description. A locator note helps reviewers find the excerpt, but it does not
 replace exact machine-checkable coordinates when those coordinates exist.
+
+Reviewed records may remain `segment_text` scoped when a full capture is not
+yet rights-reviewed for public Git. Upgrade to page-, document-, or
+source-relative coordinates only by preserving lineage and validating against a
+hashable capture.
 
 The `fixtures/` subdirectory contains synthetic validation records. Fixture
 text is not historical evidence, is not part of the pilot corpus, and must not

@@ -56,6 +56,14 @@ committing the captured text or file is permitted when the source record
 documents the URL, access datetime, capture method, local path, checksum, and
 redistribution basis.
 
+When a captured text is used for `page_text`, `document_text`, or `source_text`
+coordinates, register it in
+`projects/sacrificial-debt/data/full-text-captures.jsonl`. Source records
+identify and characterize the source artifact; full-text capture records
+identify the exact text surface used for coordinate validation, including text
+hash, capture method, capture time, rights/redistribution status, and the
+document/page/source scope.
+
 For copyrighted, restricted, rights-uncertain, or non-redistributable material,
 prefer local gitignored working copies plus source records over committing
 source text to the public repository. Every gitignored source must also appear
