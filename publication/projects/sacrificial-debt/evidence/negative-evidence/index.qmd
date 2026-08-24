@@ -1,0 +1,29 @@
+---
+title: "Negative Evidence"
+---
+
+Negative evidence records weaken, qualify, or falsify proposed Sacrificial Debt
+claims. They are first-class evidence records, not footnotes to confirming
+evidence.
+
+Canonical file:
+[`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
+
+## Current Records
+
+| Record | Proposition | Type | Strength | Review status | Packet |
+|---|---|---|---|---|---|
+| `sd-neg-000001` | `sd-prop-000001` | `contribution_reclassification` | `moderate` | `reviewed` | [sd-packet-000001](../packets/sd-packet-000001.qmd) |
+
+## Current Meaning
+
+The current negative-evidence record says Segall's statistical summary should
+qualify later claims that German Jews failed to provide proportional military
+contribution. It does not prove a Sacrificial Debt mechanism; it helps define
+what later evidence would need to overcome.
+
+## Review Boundary
+
+Absence claims, chronology contradictions, rival explanations, and contribution
+records must remain visible when they weaken a proposed mechanism claim. A
+single reviewed negative-evidence record is not a project finding.

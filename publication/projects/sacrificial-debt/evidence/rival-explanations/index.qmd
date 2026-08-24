@@ -1,0 +1,27 @@
+---
+title: "Rival Explanations"
+---
+
+Rival explanations record competing, qualifying, or alternative accounts for an
+evidence pattern. They keep mechanism testing from becoming confirmation-only.
+
+Canonical file:
+[`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)
+
+## Current Records
+
+| Record | Proposition | Explanation type | Interaction | Support status | Review status | Packet |
+|---|---|---|---|---|---|---|
+| `sd-rival-000001` | `sd-prop-000001` | Statistical rebuttal to Jewish shirking allegations | `competing` | `supported` | `reviewed` | [sd-packet-000001](../packets/sd-packet-000001.qmd) |
+
+## Current Meaning
+
+The current rival explanation treats documented proportional military
+participation as a competing or qualifying account. Later claims about
+non-dischargeability must show, with separate actor-source evidence, that
+accusations persisted despite available contribution evidence.
+
+## Review Boundary
+
+Rival explanations do not automatically falsify a hypothesis, but they raise
+the evidentiary burden for promoting a claim.

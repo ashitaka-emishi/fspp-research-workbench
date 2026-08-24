@@ -26,6 +26,7 @@ As of the Milestone 1 pilot scaffold:
 | Annotation | One project-owner reviewed observation record exists, without interpretation. | [`reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl) |
 | Negative evidence | One reviewed pilot-calibration record qualifies Jewish shirking allegations. | [`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl) |
 | Rival explanation | One reviewed rival/qualifying explanation record exists. | [`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl) |
+| Evidence packets | One rendered review packet exists for human-readable audit. | [`sd-packet-000001`](../evidence/packets/sd-packet-000001.qmd) |
 
 ## What Exists
 
@@ -47,16 +48,14 @@ Debt annotation.
 The pilot still needs:
 
 - more rights-reviewed source captures;
-- full page or document coordinate storage for OCR/transcription records;
-- readable rendered evidence packet pages;
+- historical full page or document OCR/transcription captures where rights permit;
+- additional readable rendered evidence packet pages as new packets are created;
 - additional manually reviewed propositions across source families;
 - reliability and adjudication rules for multiple coders;
 - explicit evidence chains before any research claim is promoted.
 
-Issue follow-ups:
-
-- [Full text coordinate storage](https://github.com/ashitaka-emishi/fspp-research-wrokbench/issues/13)
-- [Readable evidence packet pages](https://github.com/ashitaka-emishi/fspp-research-wrokbench/issues/15)
+Future packet expansion should be tracked with new bounded issues when more
+canonical packet records exist.
 
 ## Not Yet Evidence
 

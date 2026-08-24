@@ -1,0 +1,25 @@
+---
+title: "Evidence Packets"
+---
+
+Evidence packets are human-readable views of linked source, document, segment,
+proposition, annotation, negative-evidence, and rival-explanation records.
+
+The JSONL files under `projects/sacrificial-debt/data/` remain canonical. These
+pages are derived review surfaces and should be updated in lock-step when the
+underlying packet records change.
+
+## Available Packets
+
+| Packet | Status | Role | Canonical records |
+|---|---|---|---|
+| [sd-packet-000001](sd-packet-000001.qmd) | Project-owner reviewed calibration | Tests a negative/qualifying evidence chain for Judenzaehlung contribution claims. | `sd-src-ger-segall-jewish-soldiers-1922`, `sd-doc-000001`, `sd-seg-000001`, `sd-prop-000001`, `sd-ann-000001`, `sd-neg-000001`, `sd-rival-000001` |
+
+## Packet Rules
+
+- Packets do not promote claims.
+- Packets do not replace canonical JSONL.
+- Review status must remain visible.
+- Coordinate scope and locator notes must remain visible.
+- Limitations and rival explanations should appear next to supporting or
+  qualifying evidence.
