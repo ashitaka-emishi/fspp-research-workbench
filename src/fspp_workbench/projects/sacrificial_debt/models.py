@@ -133,6 +133,7 @@ class RivalExplanation(StrictModel):
     interaction_with_sacrificial_debt: Literal[
         "independent", "complementary", "mediating", "competing", "unknown"
     ] = "unknown"
+    review_status: Literal["draft", "reviewed", "adjudicated"] = "draft"
     notes: str | None = None
 
 

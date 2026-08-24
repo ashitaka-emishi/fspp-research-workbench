@@ -117,6 +117,19 @@
       "title": "Document Id",
       "type": "string"
     },
+    "document_year": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Document Year"
+    },
     "evidence_domain": {
       "$ref": "#/$defs/EvidenceDomain"
     },

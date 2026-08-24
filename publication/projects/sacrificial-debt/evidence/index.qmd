@@ -2,4 +2,33 @@
 title: "Evidence Audit"
 ---
 
-Scaffold page. Replace with generated/reviewed project content as the pilot develops.
+The evidence audit surface is still provisional. Canonical evidence records live
+in the project data files and must validate before they are used in claims,
+publication tables, or exported evidence chains.
+
+## Pilot Calibration Packet
+
+Issue #5 introduces the first real-source calibration candidate. It uses Jacob
+Segall's 1922 statistical study of German Jewish soldiers as a
+Germany/Judenzaehlung counterevidence source.
+
+This packet is intentionally cautious:
+
+- the source, document, segment, and proposition records are project-owner
+  reviewed for pilot calibration;
+- the annotation is `observation_reviewed`;
+- the negative-evidence and rival-explanation records are reviewed for pilot
+  calibration;
+- the packet is not an expert-adjudicated scholarly gold standard;
+- no interpretation layer or strong Sacrificial Debt evidence claim is attached.
+
+The candidate proposition is used to test whether documented German Jewish war
+participation should qualify, weaken, or rival allegations of shirking. It is
+not coded as strong Sacrificial Debt evidence, and it is not perpetrator
+rhetoric.
+
+Canonical files:
+
+- [`annotations/reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl)
+- [`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
+- [`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl)

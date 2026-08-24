@@ -1,0 +1,84 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "evidence_refs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Refs",
+      "type": "array"
+    },
+    "explanation_type": {
+      "title": "Explanation Type",
+      "type": "string"
+    },
+    "interaction_with_sacrificial_debt": {
+      "default": "unknown",
+      "enum": [
+        "independent",
+        "complementary",
+        "mediating",
+        "competing",
+        "unknown"
+      ],
+      "title": "Interaction With Sacrificial Debt",
+      "type": "string"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "proposition_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Proposition Id"
+    },
+    "review_status": {
+      "default": "draft",
+      "enum": [
+        "draft",
+        "reviewed",
+        "adjudicated"
+      ],
+      "title": "Review Status",
+      "type": "string"
+    },
+    "rival_explanation_id": {
+      "title": "Rival Explanation Id",
+      "type": "string"
+    },
+    "support_status": {
+      "enum": [
+        "supported",
+        "plausible",
+        "weak",
+        "contradicted",
+        "not_assessed"
+      ],
+      "title": "Support Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "rival_explanation_id",
+    "explanation_type",
+    "support_status"
+  ],
+  "title": "RivalExplanation",
+  "type": "object"
+}

@@ -82,12 +82,35 @@
       "default": null,
       "title": "Char Start"
     },
+    "coordinate_scope": {
+      "default": "segment_text",
+      "enum": [
+        "segment_text",
+        "page_text",
+        "document_text",
+        "source_text"
+      ],
+      "title": "Coordinate Scope",
+      "type": "string"
+    },
     "document_id": {
       "title": "Document Id",
       "type": "string"
     },
     "lineage": {
       "$ref": "#/$defs/Lineage"
+    },
+    "locator_note": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Locator Note"
     },
     "ordinal": {
       "minimum": 1,
