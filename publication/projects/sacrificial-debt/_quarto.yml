@@ -14,6 +14,8 @@ website:
         text: Methods
       - href: prospectus/index.qmd
         text: Prospectus
+      - href: status/index.qmd
+        text: Status
       - href: corpus/index.qmd
         text: Corpus
       - href: evidence/index.qmd

@@ -15,3 +15,8 @@ The workbench treats perpetrator rhetoric as historical evidence, not as valid m
 ### [Research Program Prospectus](prospectus/)
 
 The prospectus defines Sacrificial Debt as a comparative theory-building research program. It records the central research question, case-comparison logic, falsification burden, and staged relationship between the broader program and the first empirical paper.
+
+### [Pilot Status](status/)
+
+The status page summarizes what the manual pilot has stabilized, what remains
+provisional, what is not yet evidence, and what would weaken early claims.

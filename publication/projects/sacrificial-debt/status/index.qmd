@@ -1,0 +1,93 @@
+---
+title: "Pilot Status"
+---
+
+This page is a public status snapshot of the Sacrificial Debt manual pilot. The
+canonical records remain the versioned files in the repository; this page
+summarizes what those records currently make visible.
+
+::: {.callout-warning}
+The pilot has not produced findings or released claims. Reviewed calibration
+records are methodological evidence for testing the workflow, not proof of a
+Sacrificial Debt mechanism.
+:::
+
+## Current State
+
+As of the Milestone 1 pilot scaffold:
+
+| Area | Current state | Canonical source |
+|---|---|---|
+| Research authority | Prospectus v0.2 governs the substantive research question and falsification burden. | [`RESEARCH_AUTHORITY.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/research/RESEARCH_AUTHORITY.md) |
+| Codebook | Codebook v0.1.0 is locked for manual pilot annotation and validation. | [`CODEBOOK.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/codebook/CODEBOOK.md) |
+| Corpus scope | Germany-first pilot scope is defined, with contrast cases deferred. | [`manual-pilot-corpus-v0.1.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/manifests/manual-pilot-corpus-v0.1.md) |
+| Provenance | Five source records exist; most are metadata-only leads. | [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/sources.jsonl) |
+| Segmentation | One real reviewed calibration segment exists, plus synthetic fixtures. | [`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/segments.jsonl) |
+| Annotation | One project-owner reviewed observation record exists, without interpretation. | [`reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl) |
+| Negative evidence | One reviewed pilot-calibration record qualifies Jewish shirking allegations. | [`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl) |
+| Rival explanation | One reviewed rival/qualifying explanation record exists. | [`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl) |
+
+## What Exists
+
+The pilot has a bounded Germany-first source plan, a locked manual codebook, a
+provenance model, segmentation fixtures, and one real-source calibration chain.
+
+The calibration chain uses Jacob Segall's 1922 statistical study of German
+Jewish soldiers. It is treated as Tier 2 counterevidence/response material for
+the Judenzaehlung source family. Its current role is to test whether documented
+German Jewish war participation should qualify or rival claims that German Jews
+failed to provide proportional military contribution.
+
+The calibration packet is project-owner reviewed for methodological fit. It is
+not expert-adjudicated, not a released finding, and not a strong Sacrificial
+Debt annotation.
+
+## What Remains Provisional
+
+The pilot still needs:
+
+- more rights-reviewed source captures;
+- full page or document coordinate storage for OCR/transcription records;
+- readable rendered evidence packet pages;
+- additional manually reviewed propositions across source families;
+- reliability and adjudication rules for multiple coders;
+- explicit evidence chains before any research claim is promoted.
+
+Issue follow-ups:
+
+- [Full text coordinate storage](https://github.com/ashitaka-emishi/fspp-research-wrokbench/issues/13)
+- [Readable evidence packet pages](https://github.com/ashitaka-emishi/fspp-research-wrokbench/issues/15)
+
+## Not Yet Evidence
+
+The following are not claim-ready evidence:
+
+- Tier 3 source leads;
+- synthetic segmentation fixtures;
+- metadata-only source records;
+- unreviewed source excerpts;
+- observation-only annotations without interpretation;
+- single-source calibration records;
+- rhetoric treated as reception or policy causation without separate evidence.
+
+No pilot record currently authorizes a public claim that Sacrificial Debt
+explains Germany, the Holocaust, Judenzaehlung, Nazi policy, or any comparison
+case.
+
+## Falsification Burden
+
+The workbench is designed to make weakening evidence visible. Negative evidence,
+rival explanations, chronology problems, actor inconsistency, and absence
+claims are first-class records.
+
+Early claims would be weakened or blocked by evidence that:
+
+- alleged non-contribution is contradicted by reliable contribution records;
+- demonstrated service discharges or reclassifies the alleged debt;
+- expected sacrificial-debt rhetoric is absent in a defined source universe;
+- coercion occurs without debt, repayment, or equalization logic;
+- debt rhetoric does not connect to reception, institution, or policy evidence;
+- a rival explanation accounts for the same source pattern with less inference.
+
+Absence claims require a documented search scope. A missing result from casual
+search is not a valid absence claim.
