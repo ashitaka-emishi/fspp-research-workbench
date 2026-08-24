@@ -9,6 +9,7 @@ This subsite documents the reusable engineering surface of the **FSPP Research W
 - [Architecture](architecture/) — repository shape, package boundaries, and monorepo/subsite design.
 - [Environment](environment/) — Python, Node, uv, Quarto, and local virtual environment expectations.
 - [Validation Gates](validation/) — checks required before commits, publication, and research-data changes.
+- [Repository Workflow](repository/) — GitHub issue contracts, branch defaults, PR checks, and Pages setup.
 - [Publication Build](publication/) — GitHub Pages rendering model and generated-output policy.
 - [Boundaries](boundaries/) — shared infrastructure, project theory, canonical data, and generated artifacts.
 

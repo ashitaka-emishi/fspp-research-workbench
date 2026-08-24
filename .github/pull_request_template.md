@@ -12,6 +12,11 @@
 - [ ] None
 - [ ] Run/release behavior changed
 
+## Static-site/publication consequence
+- [ ] None
+- [ ] Publication pages, navigation, or generated site behavior changed
+- [ ] Site parity intentionally deferred; explain below
+
 ## Methodological guardrails
 - [ ] Identification remains separate from interpretation
 - [ ] AI/model output does not overwrite reference annotation

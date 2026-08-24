@@ -68,6 +68,10 @@ For contribution and repository governance:
 - `SECURITY.md`
 - `SUPPORT.md`
 
+Tracked SDLC work should use the Markdown issue templates in
+`.github/ISSUE_TEMPLATE/`; those templates contain the versioned issue-contract
+sections used by the repository helper.
+
 ## Repository map
 
 ```text

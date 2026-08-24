@@ -1,0 +1,40 @@
+---
+title: "Repository Workflow"
+---
+
+This repository uses GitHub issues, pull requests, Actions, and Pages as the
+public engineering control surface for the Workbench.
+
+## Defaults
+
+- Repository: <https://github.com/ashitaka-emishi/fspp-research-wrokbench>
+- Default branch: `master`
+- Published site: <https://ashitaka-emishi.github.io/fspp-research-wrokbench/>
+- Pages source: GitHub Actions
+- Normal merge method: squash merge
+
+## Issues
+
+Tracked SDLC work should use the Markdown templates in
+`.github/ISSUE_TEMPLATE/`. Each tracked issue carries a versioned
+`fspp-issue-contract` marker with required sections for objective, scope,
+branch prefix, evidence, permissions, and stopping conditions.
+
+The older ad hoc issue-form scaffolding is intentionally not used for SDLC
+work, because it does not carry the contract fields validated by the repository
+helper.
+
+## Pull Requests
+
+Pull requests should state the research, data/schema, reproducibility, and
+static-site consequences of the change. Changes to public-facing research,
+provenance, codebook, validation, or workflow documentation should update the
+relevant Quarto page in the same PR or explicitly explain why site parity is
+deferred.
+
+## Branch Protection
+
+`master` should require pull-request review and relevant status checks when the
+repository is connected to GitHub Actions. Repository-owner self-approval is a
+maintainer policy choice, not a methodological shortcut: the PR still needs a
+clear closeout record before merge and issue closure.
