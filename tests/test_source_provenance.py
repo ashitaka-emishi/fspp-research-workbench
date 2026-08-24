@@ -6,9 +6,16 @@ from fspp_workbench.core.jsonl import read_jsonl
 from fspp_workbench.core.models import Source
 
 
-def test_seed_source_metadata_checksums_are_stable() -> None:
-    path = Path("projects/sacrificial-debt/data/sources.jsonl")
-    records = read_jsonl(path)
+def test_source_metadata_checksums_are_stable() -> None:
+    paths = [
+        Path("projects/sacrificial-debt/data/sources.jsonl"),
+        *sorted(
+            Path("projects/sacrificial-debt/corpus/segmented/fixtures").glob(
+                "*/sources.jsonl"
+            )
+        ),
+    ]
+    records = [record for path in paths for record in read_jsonl(path)]
     assert records
 
     for record in records:
