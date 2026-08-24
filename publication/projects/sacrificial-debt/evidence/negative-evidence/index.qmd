@@ -7,7 +7,7 @@ claims. They are first-class evidence records, not footnotes to confirming
 evidence.
 
 Canonical file:
-[`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
+[`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl)
 
 ## Current Records
 

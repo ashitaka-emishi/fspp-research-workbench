@@ -13,7 +13,7 @@ git branch -M master
 Create an empty GitHub repository, then:
 
 ```bash
-git remote add origin git@github.com:ashitaka-emishi/fspp-research-wrokbench.git
+git remote add origin git@github.com:ashitaka-emishi/fspp-research-workbench.git
 git push -u origin master
 ```
 
@@ -24,7 +24,7 @@ Use `master` as the default branch in GitHub repository settings.
 Recommended setup after the first push:
 
 - Repository description: `Reusable research environment for FSPP political pathology projects.`
-- Website: `https://ashitaka-emishi.github.io/fspp-research-wrokbench/`
+- Website: `https://ashitaka-emishi.github.io/fspp-research-workbench/`
 - Issues: enabled.
 - Actions: enabled.
 - Pages source: GitHub Actions.

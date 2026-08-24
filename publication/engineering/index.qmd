@@ -15,8 +15,8 @@ This subsite documents the reusable engineering surface of the **FSPP Research W
 
 ## Repository
 
-- Source repository: <https://github.com/ashitaka-emishi/fspp-research-wrokbench>
-- Published site: <https://ashitaka-emishi.github.io/fspp-research-wrokbench/>
+- Source repository: <https://github.com/ashitaka-emishi/fspp-research-workbench>
+- Published site: <https://ashitaka-emishi.github.io/fspp-research-workbench/>
 - Python package namespace: `fspp_workbench`
 - Command-line interface: `fspp`
 

@@ -28,11 +28,11 @@ publication/_site/
 
 The expected Pages URL is:
 
-<https://ashitaka-emishi.github.io/fspp-research-wrokbench/>
+<https://ashitaka-emishi.github.io/fspp-research-workbench/>
 
 The source repository is:
 
-<https://github.com/ashitaka-emishi/fspp-research-wrokbench>
+<https://github.com/ashitaka-emishi/fspp-research-workbench>
 
 ## Generated Output
 

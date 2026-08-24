@@ -14,18 +14,18 @@ Sacrificial Debt mechanism.
 
 ## Current State
 
-As of the Milestone 1 pilot scaffold:
+As of the Milestone 1 pilot baseline:
 
 | Area | Current state | Canonical source |
 |---|---|---|
-| Research authority | Prospectus v0.2 governs the substantive research question and falsification burden. | [`RESEARCH_AUTHORITY.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/research/RESEARCH_AUTHORITY.md) |
-| Codebook | Codebook v0.1.0 is locked for manual pilot annotation and validation. | [`CODEBOOK.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/codebook/CODEBOOK.md) |
-| Corpus scope | Germany-first pilot scope is defined, with contrast cases deferred. | [`manual-pilot-corpus-v0.1.md`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/corpus/manifests/manual-pilot-corpus-v0.1.md) |
-| Provenance | Five source records exist; most are metadata-only leads. | [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/sources.jsonl) |
-| Segmentation | One real reviewed calibration segment exists, plus synthetic fixtures. | [`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/segments.jsonl) |
-| Annotation | One project-owner reviewed observation record exists, without interpretation. | [`reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl) |
-| Negative evidence | One reviewed pilot-calibration record qualifies Jewish shirking allegations. | [`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl) |
-| Rival explanation | One reviewed rival/qualifying explanation record exists. | [`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-wrokbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl) |
+| Research authority | Prospectus v0.2 governs the substantive research question and falsification burden. | [`RESEARCH_AUTHORITY.md`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/research/RESEARCH_AUTHORITY.md) |
+| Codebook | Codebook v0.1.0 is locked for manual pilot annotation and validation. | [`CODEBOOK.md`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/codebook/CODEBOOK.md) |
+| Corpus scope | Germany-first pilot scope is defined, with contrast cases deferred. | [`manual-pilot-corpus-v0.1.md`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/corpus/manifests/manual-pilot-corpus-v0.1.md) |
+| Provenance | Five source records exist; most are metadata-only leads. | [`sources.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/sources.jsonl) |
+| Segmentation | One real reviewed calibration segment exists, plus synthetic fixtures. | [`segments.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/segments.jsonl) |
+| Annotation | One project-owner reviewed observation record exists, without interpretation. | [`reference.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/annotations/reference.jsonl) |
+| Negative evidence | One reviewed pilot-calibration record qualifies Jewish shirking allegations. | [`negative-evidence.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/negative-evidence.jsonl) |
+| Rival explanation | One reviewed rival/qualifying explanation record exists. | [`rival-explanations.jsonl`](https://github.com/ashitaka-emishi/fspp-research-workbench/blob/master/projects/sacrificial-debt/data/rival-explanations.jsonl) |
 | Evidence packets | One rendered review packet exists for human-readable audit. | [`sd-packet-000001`](../evidence/packets/sd-packet-000001.qmd) |
 
 ## What Exists

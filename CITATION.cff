@@ -4,8 +4,8 @@ title: "FSPP Research Workbench"
 type: software
 authors:
   - name: "Foundation for the Study of Political Pathology"
-repository-code: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
-url: "https://ashitaka-emishi.github.io/fspp-research-wrokbench/"
+repository-code: "https://github.com/ashitaka-emishi/fspp-research-workbench"
+url: "https://ashitaka-emishi.github.io/fspp-research-workbench/"
 license: MIT
 version: "0.1.0"
 date-released: "2026-08-20"

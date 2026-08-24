@@ -4,8 +4,8 @@ project:
 
 website:
   title: "Engineering"
-  site-url: "https://ashitaka-emishi.github.io/fspp-research-wrokbench/engineering/"
-  repo-url: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
+  site-url: "https://ashitaka-emishi.github.io/fspp-research-workbench/engineering/"
+  repo-url: "https://github.com/ashitaka-emishi/fspp-research-workbench"
   navbar:
     left:
       - href: index.qmd
@@ -24,10 +24,10 @@ website:
         text: Boundaries
     right:
       - icon: house-door
-        href: ../index.html
+        href: "https://ashitaka-emishi.github.io/fspp-research-workbench/"
         aria-label: Workbench Home
       - icon: github
-        href: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
+        href: "https://github.com/ashitaka-emishi/fspp-research-workbench"
         aria-label: GitHub repository
 
 format:

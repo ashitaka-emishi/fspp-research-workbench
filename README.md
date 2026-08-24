@@ -2,13 +2,13 @@
 
 This repository is the **reusable research environment** for the Foundation for the Study of Political Pathology. It begins with the **Sacrificial Debt** research program, but its shared infrastructure is intentionally project-agnostic so that Lincoln, Sacrifice Law, and future projects can converge on one auditable research architecture.
 
-Website: <https://ashitaka-emishi.github.io/fspp-research-wrokbench/>
+Website: <https://ashitaka-emishi.github.io/fspp-research-workbench/>
 
-Repository: <https://github.com/ashitaka-emishi/fspp-research-wrokbench>
+Repository: <https://github.com/ashitaka-emishi/fspp-research-workbench>
 
 ## Why this repo exists
 
-Earlier digital-humanities and computational research projects established useful patterns—stable corpus IDs, provenance registries, reliability passes, adjudication, evidence chains, claim audits, Quarto publication, and release gates. This scaffold turns those lessons into reusable infrastructure rather than rebuilding them per project.
+Earlier digital-humanities and computational research projects established useful patterns—stable corpus IDs, provenance registries, reliability passes, adjudication, evidence chains, claim audits, Quarto publication, and release gates. This workbench consolidates those lessons into reusable infrastructure rather than rebuilding them per project.
 
 The governing principle is:
 
@@ -101,20 +101,3 @@ docs/                                         architecture, ADRs, methods, migra
 - Rhetoric, reception, and policy are separate evidence domains.
 - Claims link to supporting, contradicting, and qualifying evidence.
 - Published outputs require a run manifest.
-
-## First milestone
-
-The scaffold is intentionally **manual-first**. Milestone 1 is not automated extraction. It is:
-
-1. register a small Tier 1 corpus;
-2. preserve source provenance and checksums;
-3. normalize/segment reproducibly;
-4. create stable proposition IDs;
-5. manually code observable Layer A;
-6. lock observation;
-7. manually code interpretive Layers B–G;
-8. capture negative evidence and rivals;
-9. build evidence chains and claim records;
-10. reproduce the first controlled tables/site pages.
-
-See `projects/sacrificial-debt/BACKLOG.md`.

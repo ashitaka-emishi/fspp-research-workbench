@@ -10,7 +10,7 @@ reviewable, and easy to audit.
 
 ## Repository Defaults
 
-- GitHub repo: `ashitaka-emishi/fspp-research-wrokbench`
+- GitHub repo: `ashitaka-emishi/fspp-research-workbench`
 - Default branch: `master`
 - Repository visibility: public unless the maintainer chooses otherwise before push
 - Runtime language: Python package with Quarto publication site
@@ -160,7 +160,7 @@ Run the state helper before creating a branch, editing files, opening a PR,
 addressing review, or merging issue-directed work:
 
 ```bash
-python3 .agents/skills/sdlc-workflow/scripts/sdlc_state.py inspect-issue <issue-number> --repo ashitaka-emishi/fspp-research-wrokbench --cwd .
+python3 .agents/skills/sdlc-workflow/scripts/sdlc_state.py inspect-issue <issue-number> --repo ashitaka-emishi/fspp-research-workbench --cwd .
 ```
 
 Use `--json` when the next step needs machine-readable output. Treat the helper
@@ -172,13 +172,13 @@ state, stop and report the exact unavailable command instead of inventing state.
 Inspect milestone contract, child, closeout, and acceptance facts with:
 
 ```bash
-python3 .agents/skills/sdlc-workflow/scripts/sdlc_state.py inspect-milestone <milestone-number> --repo ashitaka-emishi/fspp-research-wrokbench --cwd .
+python3 .agents/skills/sdlc-workflow/scripts/sdlc_state.py inspect-milestone <milestone-number> --repo ashitaka-emishi/fspp-research-workbench --cwd .
 ```
 
 Summarize completed goal-usage records by comparable scope and risk with:
 
 ```bash
-python3 .agents/skills/sdlc-workflow/scripts/sdlc_state.py summarize-goal-usage --repo ashitaka-emishi/fspp-research-wrokbench --scope milestone --risk high
+python3 .agents/skills/sdlc-workflow/scripts/sdlc_state.py summarize-goal-usage --repo ashitaka-emishi/fspp-research-workbench --scope milestone --risk high
 ```
 
 The command reports min/median/max observations but withholds a sizing signal

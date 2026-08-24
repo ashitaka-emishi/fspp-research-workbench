@@ -11,7 +11,7 @@ following issue number, issue range, or `next` — read and follow
 
 Use the repository defaults in that skill:
 
-- GitHub repo: `ashitaka-emishi/fspp-research-wrokbench`
+- GitHub repo: `ashitaka-emishi/fspp-research-workbench`
 - Default branch: `master`
 - Python namespace: `fspp_workbench`
 - CLI: `fspp`

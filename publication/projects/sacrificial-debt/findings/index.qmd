@@ -4,6 +4,6 @@ title: "Findings"
 
 There are no released Sacrificial Debt findings yet.
 
-The current project state is a manual-pilot scaffold with a reviewed
+The current project state is a manual-pilot baseline with a reviewed
 calibration packet, not a released claim set. See the [pilot status](../status/)
 page for the current evidence and limitation snapshot.

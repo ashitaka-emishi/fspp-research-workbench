@@ -6,8 +6,8 @@ project:
 
 website:
   title: "FSPP Research Workbench"
-  site-url: "https://ashitaka-emishi.github.io/fspp-research-wrokbench/"
-  repo-url: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
+  site-url: "https://ashitaka-emishi.github.io/fspp-research-workbench/"
+  repo-url: "https://github.com/ashitaka-emishi/fspp-research-workbench"
   navbar:
     left:
       - href: index.qmd
@@ -18,7 +18,7 @@ website:
         text: Sacrificial Debt
     right:
       - icon: github
-        href: "https://github.com/ashitaka-emishi/fspp-research-wrokbench"
+        href: "https://github.com/ashitaka-emishi/fspp-research-workbench"
         aria-label: GitHub repository
 
 format:
