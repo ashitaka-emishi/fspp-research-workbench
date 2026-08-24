@@ -212,6 +212,19 @@
       "default": null,
       "title": "Publication Date"
     },
+    "publication_year": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Publication Year"
+    },
     "redistribution_status": {
       "title": "Redistribution Status",
       "type": "string"

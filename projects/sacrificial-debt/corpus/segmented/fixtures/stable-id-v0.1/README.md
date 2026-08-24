@@ -9,6 +9,7 @@ It exists only to validate stable identifier behavior and coordinate checks:
 - document to segment referential integrity;
 - proposition to segment referential integrity;
 - segment `text_hash` values;
-- required character coordinate bounds in fixture records.
+- required character coordinate bounds in fixture records;
+- explicit `coordinate_scope: segment_text` semantics.
 
 The text is synthetic and is not historical evidence.

@@ -7,6 +7,11 @@ controlled coding protocol.
 
 The principal interpretive unit is the proposition. Each proposition must
 resolve to stable source coordinates before it can become pilot evidence.
+Coordinate records include a `coordinate_scope` field so reviewers can tell
+whether `char_start` and `char_end` are relative to the stored segment excerpt,
+a full page, a full document, or a complete source capture.
+Records may also include `locator_note` for human-readable page, section,
+table, item, or folio guidance.
 
 Manual coding proceeds in two layers:
 
@@ -24,3 +29,8 @@ owing, repayment, deserved loss, required contribution, or legitimate sanction.
 
 Rhetoric, reception, and policy remain separate evidence domains. Evidence in
 one domain does not automatically establish another.
+
+The first real-source reference packet is treated as pilot calibration until
+human review is complete. Project-owner review can establish methodological fit
+for this stage, but it is not represented as expert adjudication or final
+scholarly authority.

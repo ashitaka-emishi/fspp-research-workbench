@@ -6,6 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from .enums import CorpusTier, EvidenceDomain, EvidenceRelation, RecordStatus
 
 SHA256 = r"^[a-f0-9]{64}$"
+CoordinateScope = Literal["segment_text", "page_text", "document_text", "source_text"]
 
 
 class StrictModel(BaseModel):
@@ -33,6 +34,7 @@ class Source(StrictModel):
     repository: str | None = None
     edition: str | None = None
     publication_date: date | None = None
+    publication_year: int | None = Field(default=None, ge=0)
     acquisition_date: date
     accessed_at: datetime
     capture_method: Literal[
@@ -70,6 +72,7 @@ class Document(StrictModel):
     source_id: str
     title: str
     document_date: date | None = None
+    document_year: int | None = Field(default=None, ge=0)
     actor_ids: list[str] = Field(default_factory=list)
     audience: str | None = None
     evidence_domain: EvidenceDomain
@@ -86,6 +89,8 @@ class Segment(StrictModel):
     ordinal: int = Field(ge=1)
     text: str
     page_label: str | None = None
+    locator_note: str | None = None
+    coordinate_scope: CoordinateScope = "segment_text"
     char_start: int | None = Field(default=None, ge=0)
     char_end: int | None = Field(default=None, ge=0)
     text_hash: str = Field(pattern=SHA256)
@@ -97,6 +102,8 @@ class Proposition(StrictModel):
     document_id: str
     segment_ids: list[str] = Field(min_length=1)
     exact_text: str
+    locator_note: str | None = None
+    coordinate_scope: CoordinateScope = "segment_text"
     char_start: int | None = Field(default=None, ge=0)
     char_end: int | None = Field(default=None, ge=0)
     proposition_note: str | None = None

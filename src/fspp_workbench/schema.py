@@ -8,6 +8,7 @@ from fspp_workbench.projects.sacrificial_debt.models import (
     EvidenceChain,
     NegativeEvidence,
     ResearchClaim,
+    RivalExplanation,
 )
 
 MODELS = {
@@ -18,6 +19,7 @@ MODELS = {
     "run-manifest": RunManifest,
     "sd-annotation": Annotation,
     "sd-negative-evidence": NegativeEvidence,
+    "sd-rival-explanation": RivalExplanation,
     "sd-evidence-chain": EvidenceChain,
     "sd-research-claim": ResearchClaim,
     "sd-adjudication": Adjudication,

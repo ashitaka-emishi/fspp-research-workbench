@@ -62,12 +62,14 @@ def test_stable_id_fixture_hashes_and_coordinates_are_exact() -> None:
     ]
 
     for segment in segments:
+        assert segment.coordinate_scope == "segment_text"
         assert segment.text_hash == sha256_text(segment.text)
         assert segment.char_start == 0
         assert segment.char_end == len(segment.text)
 
     segment_text_by_id = {segment.segment_id: segment.text for segment in segments}
     for prop in props:
+        assert prop.coordinate_scope == "segment_text"
         assert prop.char_start == 0
         assert prop.char_end == len(prop.exact_text)
         assert prop.exact_text in "\n".join(
